@@ -1,0 +1,149 @@
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+hr{
+  margin: 20px 0px;
+}
+
+.container {
+  width: 600px;
+  margin: auto;
+  padding: 20px;
+  background-color: white;
+}
+
+
+
+.title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 500;
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+
+/* 800px 이하에서 반응형 설정 */
+@media screen and (max-width: 800px) {
+  .container {
+    width: 100%;
+    margin: auto;
+    padding: 0px;
+  }
+  .title{
+    font-size: 1.5rem;
+  }
+
+}
+
+/* 480px 이하에서 반응형 설정 */
+@media screen and (max-width: 480px) {
+  .container {
+    width: 100%;
+    padding: 0px;
+    font-size: 0.8rem;
+  }
+  .title{
+    font-size: 1.5rem;
+  }
+
+  .link-button{
+    font-size: 0.7rem;
+    padding: 3px;
+  }
+}
+
+.btnLogin,
+.btnSearch {
+  width: 100%;
+  padding: 12px;
+  background-color: #06adc3;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  margin: 10px 0;
+}
+
+.link-buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.link-button {
+  width: 45%;
+  padding: 12px;
+  background-color: #ffffff;
+  color: #111111;
+  border: 1px solid #cccccc;
+  cursor: pointer;
+}
+
+.link-button:hover {
+  font-weight: 500;
+}
+
+.link-button.active {
+  width: 45%;
+  padding: 12px;
+  background-color: #111111;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.link-button.active:hover {
+  font-weight: 500;
+}
+
+.sns-login {
+  margin-top: 20px;
+}
+
+.sns-login button {
+  width: 100%;
+  padding: 12px;
+  margin: 5px 0;
+  border: none;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.sns-login .payco {
+  background-color: #c90000;
+}
+
+.sns-login .naver {
+  background-color: #2db400;
+}
+
+.sns-login .kakao {
+  background-color: #ffdc00;
+  color: #3c1e1d;
+}
+
+.non-member input[type="text"] {
+  margin: 5px 0;
+}
+
+.btnSearch {
+  background-color: #06adc3;
+}
+
+.btnSearch:hover {
+  background-color: #005D75;
+}
+
+.btnLogin:hover{
+  background-color: #005D75;
+}
+
+p {
+  font-size: 0.8rem;
+  color: #999;
+  text-align: center;
+}

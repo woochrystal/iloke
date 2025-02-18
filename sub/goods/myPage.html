@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>project</title>
+    <link rel="stylesheet" href="./sub/goods/myPage.css">
+    <script src="./sub/goods/myPage.js"></script>
+</head>
+<body>
+    <div class="wrap">
+        <main class="main-content">
+            <section class="mypage">
+                <article class="mypage-top-wrap">
+                    <div class="mypage-top-info">
+                        <span class="mypage-top-text">***님의</span>
+                        <p class="mypage-top-grade">회원 등급은 <span class="mypage-grade">일반회원등급</span> 입니다.</p>
+                    </div> 
+                    <div class="mypage-top-wallet">
+                        <ul class="mypage-top-wallet-wrap">
+                            <li class="mypage-top-mileage">
+                                <img src="../../content/img/sample/icon_mileage.png" class="coupon-mileage" alt="마일리지 아이콘" />
+                                <b class="coupon-title">마일리지</b>
+                                <span class="coupon-count"><a href="#" onclick="loadContent('./sub/goods/mileage.html')">20,000</a>점</span>
+                            </li>
+                            <li class="mypage-top-balance">
+                                <img src="../../content/img/sample/icon_balance.png" class="coupon-balance" alt="예치금 아이콘" />
+                                <b class="coupon-title">예치금</b>
+                                <span class="coupon-count"><a href="#" onclick="loadContent('./sub/goods/deposit.html')">0</a>원</span>
+                            </li>
+                        </ul>
+                    </div>
+                </article>
+                <article class="mypage-order-wrap">
+                    <!-- HTML -->
+                    <div class="mypage-order-title">
+                        <h3>진행 중인 주문</h3>
+                        <span>최근 30일 내에 진행중인 주문정보입니다.</span>
+                    </div>
+                    <div class="mypage-order-list">
+                        <div class="mypage-order">
+                            <div class="mypage-item">
+                                <span class="mypage-circle active">1</span>
+                                <p>입금대기</p>
+                            </div>
+                            <div class="mypage-item">
+                                <span class="mypage-circle">0</span>
+                                <p>결제완료</p>
+                            </div>
+                            <div class="mypage-item">
+                                <span class="mypage-circle">0</span>
+                                <p>상품준비중</p>
+                            </div>
+                            <div class="mypage-item">
+                                <span class="mypage-circle">0</span>
+                                <p>배송중</p>
+                            </div>
+                            <div class="mypage-item">
+                                <span class="mypage-circle">0</span>
+                                <p>배송완료</p>
+                            </div>
+                            <div class="mypage-item">
+                                <span class="mypage-circle">0</span>
+                                <p>구매확정</p>
+                            </div>
+                        </div>
+                        <div class="mypage-order-exchange">
+                            <dl>
+                                <dt>취소</dt>
+                                <dd>0건</dd>
+                            </dl>
+                            <dl>
+                                <dt>교환</dt>
+                                <dd>0건</dd>
+                            </dl>
+                            <dl>
+                                <dt>반품</dt>
+                                <dd>0건</dd>
+                            </dl>
+                        </div>
+                    </div>
+                </article>
+                <article class="mypage-date-wrap">
+                    <div class="mypage-date-title">
+                        <h3>주문목록 / 배송조회</h3>
+                    </div>
+                    <div class="mypage-date-check">
+                        <div class="mypage-date-period">
+                            <span class="mypage-period-btn">조회기간</span>
+                            <button data-value="0" value="2024-09-24">오늘</button>
+                            <button data-value="7">7일</button>
+                            <button data-value="15">15일</button>
+                            <button data-value="30">1개월</button>
+                            <button data-value="90">3개월</button>
+                            <button data-value="365">1년</button>
+                        </div>
+                        <div class="mypage-date-box">
+                            <input id="start-date" type="date" />&nbsp; - &nbsp;
+                            <input id="last-date" type="date" />
+                        </div>
+                        <div class="mypage-date-search">
+                            <span class="mypage-date-search-btn" onclick="validateDates()">조회</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="mypage-recent-wrap">
+                    <div class="mypage-recent-title">
+                        <div class="mypage-recent-info">
+                            <h3>최근 주문 정보</h3>
+                            <span>최근 30일 내에 주문하신 내역입니다.</span>
+                        </div>
+                        <div class="mypage-recent-more">
+                            <!-- <a href="#">더보기&nbsp;<i class="fa-solid fa-angle-right"></i></a> -->
+                        </div>
+                    </div>
+                    <table class="order-table">
+                        <colgroup>
+                            <col style="width:15%">
+                            <col>
+                            <col style="width:15%">
+                            <col style="width:15%">
+                            <col style="width:15%">
+                        </colgroup>
+                        <tr class="table-header">
+                            <th class="header-date">날짜/주문번호</th>
+                            <th class="header-title">상품명/옵션</th>
+                            <th class="header-money">상품금액/수량</th>
+                            <th class="header-order">주문상태</th>
+                            <th class="header-check">확인/리뷰</th>
+                        </tr>
+                        <tr class="order-info">
+                            <td class="order-details">
+                                <ul>
+                                    <li class="order-date">2024/09/23</li>
+                                    <li>24092310540010</li>
+                                    <li><a href="#" class="order-cancel">주문취소</a></li> <!-- 주문취소 누르면 컨펌 메시지 출력 -->
+                                    <li><p>※주문제작상품으로 <b class="order-red">환불/반품 신청시</b> 필히 고객센터(1588-6007)로 문의주시길 바랍니다.</p></li>
+                                </ul>
+                            </td>
+                            <td class="order-prod">
+                                <a href="#" class="order-link" onclick="loadContent('./sub/goods/goodsDetail.html')">
+                                    <div class="order-prod-area">
+                                        <img src="https://picsum.photos/150/100" alt="protoImage" />
+                                        <span class="order-title">자코모 폴딩 에코백</span>
+                                    </div>
+                                    <div class="order-prod-option">
+                                        <strong>15,000원 / 1개</strong>
+                                        <span>색상: 크림</span>
+                                        <b>주문상태 : 입금대기</b>
+                                    </div>
+                                </a>
+                            </td>
+                            <td class="order-price">
+                                <strong>15,000원</strong> / 1개
+                            </td>
+                            <td class="order-deposit">입금대기</td>
+                            <td class="order-review">
+                                <div class="order-review-button">
+                                    <a href="#" onclick="loadContent('./sub/notice/all_review_write.html')">후기등록</a>
+                                </div>
+                            </td>
+                        </tr>
+                        
+                        <tr class="order-info">
+                            <td class="order-details">
+                                <ul>
+                                    <li class="order-date">2024/09/23</li>
+                                    <li>24092310540010</li>
+                                    <li><a href="#" class="order-cancel">주문취소</a></li> <!-- 주문취소 누르면 컨펌 메시지 출력 -->
+                                    <li><p>※주문제작상품으로 <b class="order-red">환불/반품 신청시</b> 필히 고객센터(1588-6007)로 문의주시길 바랍니다.</p></li>
+                                </ul>
+                            </td>
+                            <td class="order-prod">
+                                <a href="#" class="order-link" onclick="loadContent('./sub/goods/goodsDetail.html')">
+                                    <div class="order-prod-area">
+                                        <img src="https://picsum.photos/150/100" alt="protoImage" />
+                                        <span class="order-title">자코모 폴딩 에코백</span>
+                                    </div>
+                                    <div class="order-prod-option">
+                                        <strong>15,000원 / 1개</strong>
+                                        <span>색상: 크림</span>
+                                        <b>주문상태 : 결제완료</b>
+                                    </div>
+                                </a>
+                            </td>
+                            <td class="order-price">
+                                <strong>15,000원</strong> / 1개
+                            </td>
+                            <td class="order-deposit">결제완료</td>
+                            <td class="order-review">
+                                <div class="order-review-button">
+                                    <a href="#" onclick="loadContent('./sub/notice/all_review_write.html')">후기등록</a>
+                                </div>
+                            </td>
+                        </tr>
+
+                        <tr class="order-info">
+                            <td class="order-details">
+                                <ul>
+                                    <li class="order-date">2024/09/23</li>
+                                    <li>24092310540010</li>
+                                    <li><a href="#" class="order-cancel">주문취소</a></li> <!-- 주문취소 누르면 컨펌 메시지 출력 -->
+                                    <li><p>※주문제작상품으로 <b class="order-red">환불/반품 신청시</b> 필히 고객센터(1588-6007)로 문의주시길 바랍니다.</p></li>
+                                </ul>
+                            </td>
+                            <td class="order-prod">
+                                <a href="#" class="order-link" onclick="loadContent('./sub/goods/goodsDetail.html')">
+                                    <div class="order-prod-area">
+                                        <img src="https://picsum.photos/150/100" alt="protoImage" />
+                                        <span class="order-title">자코모 폴딩 에코백</span>
+                                    </div>
+                                    <div class="order-prod-option">
+                                        <strong>15,000원 / 1개</strong>
+                                        <span>색상: 크림</span>
+                                        <b>주문상태 : 상품준비중</b>
+                                    </div>
+                                </a>
+                            </td>
+                            <td class="order-price">
+                                <strong>15,000원</strong> / 1개
+                            </td>
+                            <td class="order-deposit">상품준비중</td>
+                            <td class="order-review">
+                                <div class="order-review-button">
+                                    <a href="#" onclick="loadContent('./sub/notice/all_review_write.html')">후기등록</a>
+                                </div>
+                            </td>
+                        </tr>
+                        
+                        <tr class="order-info">
+                            <td class="order-details">
+                                <ul>
+                                    <li class="order-date">2024/09/23</li>
+                                    <li>24092310540010</li>
+                                    <li><a href="#" class="order-refund">반품신청</a></li> <!-- 주문취소 누르면 컨펌 메시지 출력 -->
+                                    <li><p>※주문제작상품으로 <b class="order-red">환불/반품 신청시</b> 필히 고객센터(1588-6007)로 문의주시길 바랍니다.</p></li>
+                                </ul>
+                            </td>
+                            <td class="order-prod">
+                                <a href="#" class="order-link" onclick="loadContent('./sub/goods/goodsDetail.html')">
+                                    <div class="order-prod-area">
+                                        <img src="https://picsum.photos/150/100" alt="protoImage" />
+                                        <span class="order-title">자코모 폴딩 에코백</span>
+                                    </div>
+                                    <div class="order-prod-option">
+                                        <strong>15,000원 / 1개</strong>
+                                        <span>색상: 크림</span>
+                                        <b>주문상태 : 배송중</b>
+                                    </div>
+                                </a>
+                            </td>
+                            <td class="order-price">
+                                <strong>15,000원</strong> / 1개
+                            </td>
+                            <td class="order-deposit">배송중</td>
+                            <td class="order-review">
+                                <div class="order-review-button">
+                                    <a href="#" onclick="loadContent('./sub/notice/all_review_write.html')">후기등록</a>
+                                </div>
+                            </td>
+                        </tr>
+
+                        <tr class="order-info">
+                            <td class="order-details">
+                                <ul>
+                                    <li class="order-date">2024/09/23</li>
+                                    <li>24092310540010</li>
+                                    <li><a href="#" class="order-refund">반품신청</a></li> <!-- 주문취소 누르면 컨펌 메시지 출력 -->
+                                    <li><p>※주문제작상품으로 <b class="order-red">환불/반품 신청시</b> 필히 고객센터(1588-6007)로 문의주시길 바랍니다.</p></li>
+                                </ul>
+                            </td>
+                            <td class="order-prod">
+                                <a href="#" class="order-link" onclick="loadContent('./sub/goods/goodsDetail.html')">
+                                    <div class="order-prod-area">
+                                        <img src="https://picsum.photos/150/100" alt="protoImage" />
+                                        <span class="order-title">자코모 폴딩 에코백</span>
+                                    </div>
+                                    <div class="order-prod-option">
+                                        <strong>15,000원 / 1개</strong>
+                                        <span>색상: 크림</span>
+                                        <b>주문상태 : 배송완료</b>
+                                    </div>
+                                </a>
+                            </td>
+                            <td class="order-price">
+                                <strong>15,000원</strong> / 1개
+                            </td>
+                            <td class="order-deposit">배송완료</td>
+                            <td class="order-review">
+                                <div class="order-review-button">
+                                    <a href="#" onclick="loadContent('./sub/notice/all_review_write.html')">후기등록</a>
+                                </div>
+                            </td>
+                        </tr>
+
+                        <tr class="order-info">
+                            <td class="order-details">
+                                <ul>
+                                    <li class="order-date">2024/09/23</li>
+                                    <li>24092310540010</li>
+                                    <li><p>※주문제작상품으로 <b class="order-red">환불/반품 신청시</b> 필히 고객센터(1588-6007)로 문의주시길 바랍니다.</p></li>
+                                </ul>
+                            </td>
+                            <td class="order-prod">
+                                <a href="#" class="order-link" onclick="loadContent('./sub/goods/goodsDetail.html')">
+                                    <div class="order-prod-area">
+                                        <img src="https://picsum.photos/150/100" alt="protoImage" />
+                                        <span class="order-title">자코모 폴딩 에코백</span>
+                                    </div>
+                                    <div class="order-prod-option">
+                                        <strong>15,000원 / 1개</strong>
+                                        <span>색상: 크림</span>
+                                        <b>주문상태 : 구매확정</b>
+                                    </div>
+                                </a>
+                            </td>
+                            <td class="order-price">
+                                <strong>15,000원</strong> / 1개
+                            </td>
+                            <td class="order-deposit">구매확정</td>
+                            <td class="order-review">
+                                <div class="order-review-button">
+                                    <a href="#" onclick="loadContent('./sub/notice/all_review_write.html')">후기등록</a>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+
+                </article>
+                <article class="mypage-product-view-wrap">
+                    <div class="mypage-product-view-title"> <!-- product-view-title -->
+                        <div class="mypage-product-view-info">
+                            <h3>최근 본 상품</h3>
+                            <span>***님께서 본 최근 상품입니다.</span>
+                        </div>
+                    </div>
+                    <div class="mypage-product">
+                        <div class="mypage-product-list">
+                            <div class="mypage-product-item">
+                                <a href="#" class="product-image-link" onclick="loadContent('./sub/goods/goodsDetail.html')"><img src="https://picsum.photos/300/175" alt="protoImage"></a>
+                                <a href="#" class="product-title-link" onclick="loadContent('./sub/goods/goodsDetail.html')"><p>뉴 클레버 4인 기능성 비텔로 통가죽 슈렁큰 천연면피 소가죽 소파 + 쿠션 1개</p></a>
+                                <div class="mypage-price-container">
+                                    <div class="mypage-price-details">
+                                        <strong class="mypage-discounted-price">2,880,000원</strong>
+                                    </div>
+                                    <button>
+                                        <i class="fa-regular fa-heart line"></i>
+                                        <i class="fa-solid fa-heart full"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="mypage-product-item">
+                                <a href="#" class="product-image-link" onclick="loadContent('./sub/goods/goodsDetail.html')"><img src="https://picsum.photos/300/175" alt="protoImage"></a>
+                                <a href="#" class="product-title-link" onclick="loadContent('./sub/goods/goodsDetail.html')"><p>뉴 클레버 4인 기능성 비텔로 통가죽 슈렁큰 천연면피 소가죽 소파 + 쿠션 1개</p></a>
+                                <div class="mypage-price-container">
+                                    <div class="mypage-price-details">
+                                        <strong class="mypage-discounted-price">2,880,000원</strong>
+                                    </div>
+                                    <button>
+                                        <i class="fa-regular fa-heart line"></i>
+                                        <i class="fa-solid fa-heart full"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="mypage-product-item">
+                                <a href="#" class="product-image-link" onclick="loadContent('./sub/goods/goodsDetail.html')"><img src="https://picsum.photos/300/175" alt="protoImage"></a>
+                                <a href="#" class="product-title-link" onclick="loadContent('./sub/goods/goodsDetail.html')"><p>뉴 클레버 4인 기능성 비텔로 통가죽 슈렁큰 천연면피 소가죽 소파 + 쿠션 1개</p></a>
+                                <div class="mypage-price-container">
+                                    <div class="mypage-price-details">
+                                        <strong class="mypage-discounted-price">2,880,000원</strong>
+                                    </div>
+                                    <button>
+                                        <i class="fa-regular fa-heart line"></i>
+                                        <i class="fa-solid fa-heart full"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="mypage-product-item">
+                                <a href="#" class="product-image-link" onclick="loadContent('./sub/goods/goodsDetail.html')"><img src="https://picsum.photos/300/175" alt="protoImage"></a>
+                                <a href="#" class="product-title-link" onclick="loadContent('./sub/goods/goodsDetail.html')"><p>뉴 클레버 4인 기능성 비텔로 통가죽 슈렁큰 천연면피 소가죽 소파 + 쿠션 1개</p></a>
+                                <div class="mypage-price-container">
+                                    <div class="mypage-price-details">
+                                        <strong class="mypage-discounted-price">2,880,000원</strong>
+                                    </div>
+                                    <button>
+                                        <i class="fa-regular fa-heart line"></i>
+                                        <i class="fa-solid fa-heart full"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </section>
+        </main>
+    </div>
+</body>
+</html>

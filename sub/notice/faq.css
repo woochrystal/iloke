@@ -1,0 +1,247 @@
+.wrapper {
+    /* width: 100%; */
+    /* max-width: 1200px; */
+    min-height: 500px;
+}
+
+.wrapper>h2 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.filter_table>table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.filter_table>table>td {
+    text-align: left;
+    padding: 13px 10px 15px 10px;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    background-color: #F5F5F5;
+    width: 1200px;
+    font-size: 1rem;
+}
+
+.filter-ul {
+    display: flex;
+    color: #ccc;
+}
+
+.filter-ul>li>a>span {
+    margin-right: 5px;
+}
+
+.filter-ul>li:nth-child(2)>a {
+    border-left: 1px solid #ccc;
+    padding-left: 5px;
+}
+
+.filter-ul>li:nth-child(3)>a {
+    border-left: 1px solid #ccc;
+    padding-left: 5px;
+}
+
+.filter-ul>li:nth-child(4)>a {
+    border-left: 1px solid #ccc;
+    padding-left: 5px;
+}
+
+.filter-ul>li:nth-child(1)>a:hover {
+    text-decoration: underline;
+    color: #000;
+}
+
+.filter-ul>li:nth-child(2)>a:hover {
+    text-decoration: underline;
+    color: #000;
+}
+
+.filter-ul>li:nth-child(3)>a:hover {
+    text-decoration: underline;
+    color: #000;
+}
+
+.filter-ul>li:nth-child(4)>a:hover {
+    text-decoration: underline;
+    color: #000;
+}
+
+.filter-ul>li>a:nth-child(1) {
+    width: 25px;
+}
+
+.filter-ul>li>a:nth-child(2) {
+    border-left: 1px solid #cccccc;
+}
+
+.filter-ul>li>a:nth-child(3) {
+    border-left: 1px solid #cccccc;
+}
+
+.filter-ul>li>a:nth-child(4) {
+    border-left: 1px solid #cccccc;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+th {
+    text-align: center;
+    padding: 13px 10px 15px 10px;
+    border-top: 1px solid #dbdbdb;
+    border-bottom: 1px solid #dbdbdb;
+    background-color: #fbfbfb;
+    width: 1200px;
+    font-size: 1rem;
+}
+
+th:nth-child(1) {
+    width: 100px;
+}
+
+th:nth-child(2) {
+    width: 300px;
+}
+
+th:nth-child(3) {
+    width: 800px;
+}
+
+
+
+td {
+    text-align: center;
+    padding: 13px 10px 15px 10px;
+    border-bottom: 1px solid #dbdbdb;
+    width: 1200px;
+    font-size: 0.8rem;
+    height: 20px;
+}
+
+td:nth-child(1) {
+    width: 200px;
+}
+
+td:nth-child(2) {
+    width: 200px;
+}
+
+td:nth-child(3) {
+    width: 400px;
+    text-align: left;
+}
+
+td:nth-child(4) {
+    width: 200px;
+}
+
+td:nth-child(5) {
+    width: 200px
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.page {
+    text-align: center;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.pagination {
+    list-style: none;
+    display: inline-block;
+    padding: 0;
+    justify-content: center;
+}
+
+.pagination li {
+    display: inline-block;
+    text-align: center;
+}
+
+.pagination a {
+    float: left;
+    display: block;
+    font-size: 1rem;
+    text-decoration: none;
+    padding: 5px 12px;
+    color: #96a0ad;
+    line-height: 1.5;
+}
+
+.pagination a:active {
+    outline: none;
+}
+
+.last {
+    margin-left: 15px;
+}
+
+.modal .num {
+    margin-left: 3px;
+    padding: 0px;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+}
+
+.modal .num:hover {
+    border-style: dotted;
+    color: #dbdbdb;
+}
+
+.modal .num.active,
+.modal .num:active {
+    cursor: pointer;
+    background-color: #555;
+    color: white;
+}
+
+/* 800px 이하일 때 조회 항목 숨김 */
+@media (max-width: 800px) {
+    table th:nth-child(1),
+    table td:nth-child(1) {
+        font-size: 0.8rem;
+    }
+    table th:nth-child(2),
+    table td:nth-child(2) {
+        font-size: 0.8rem;
+    }
+    table th:nth-child(3),
+    table td:nth-child(3) {
+        font-size: 0.8rem;
+    }
+}
+
+/* 480px 이하일 때 날짜 항목도 숨김 */
+@media (max-width: 480px) {
+    table th:nth-child(1),
+    table td:nth-child(1) {
+        font-size: 0.8rem;
+    }
+    table th:nth-child(2),
+    table td:nth-child(2) {
+        font-size: 0.8rem;
+    }
+    table th:nth-child(3),
+    table td:nth-child(3) {
+        font-size: 0.8rem;
+    }
+}

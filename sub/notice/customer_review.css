@@ -1,0 +1,162 @@
+.wrapper {
+    /* max-width: 1200px; */
+    min-height: 500px;
+}
+
+.wrapper>h2 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+th {
+    text-align: center;
+    padding: 13px 10px 15px 10px;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    background-color: #F5F5F5;
+    width: 1200px;
+    font-size: 1rem;
+}
+
+th:nth-child(1) {
+    width: 100px;
+}
+
+th:nth-child(2) {
+    width: 800px;
+}
+
+th:nth-child(3) {
+    width: 100px;
+}
+
+th:nth-child(4) {
+    width: 100px;
+}
+
+th:nth-child(5) {
+    width: 100px;
+}
+
+td {
+    text-align: center;
+    padding: 13px 10px 15px 10px;
+    border-bottom: 1px solid #dbdbdb;
+    width: 1200px;
+    font-size: 0.8rem;
+    height: 20px;
+}
+
+td:nth-child(1) {
+    width: 100px;
+}
+
+td:nth-child(2) {
+    width: 800px;
+    text-align: left;
+}
+
+td:nth-child(3) {
+    width: 100px;
+}
+
+td:nth-child(4) {
+    width: 100px;
+}
+
+td:nth-child(5) {
+    width: 100px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.pagination-container {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+    padding: 30px 0;
+}
+
+.pagination-container .pagination-controls ul {
+    display: flex;
+}
+
+.pagination-container .pagination-controls ul li {
+    display: flex;
+    align-items: center;
+    line-height: 25px;
+}
+
+.pagination-container .pagination-controls ul li a {
+    padding: 0 6px;
+    margin: 0 3px;
+    font-size: 0.8rem;
+}
+
+.pagination-container .pagination-controls ul li .current {
+    background-color: #005D75;
+    display: block;
+    width: 25px;
+    height: 25px;
+    text-align: center;
+    color: #fff;
+    font-size: 1rem;
+    line-height: 25px;
+}
+
+.pagination-container .pagination-controls ul .pagination-next a,
+.pagination-container .pagination-controls ul .pagination-last a {
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
+    text-align: center;
+}
+
+.write-btn {
+    width: 140px;
+    height: 50px;
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #06ADC3;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+.write-btn:hover {
+    background-color: #005D75;
+}
+
+/* 800px 이하일 때 조회 항목 숨김 */
+@media (max-width: 800px) {
+    table th:nth-child(5),
+    table td:nth-child(5) {
+        display: none;
+    }
+}
+
+/* 480px 이하일 때 날짜 항목도 숨김 */
+@media (max-width: 480px) {
+    table th:nth-child(3),
+    table td:nth-child(3) {
+        display: none;
+    }
+}

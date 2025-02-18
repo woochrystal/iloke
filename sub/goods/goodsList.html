@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>project</title>
+    <link rel="stylesheet" href="./sub/goods/goodsList.css" />
+    <script src="../../sub/goods/goodsList.js"></script>
+ 
+  </head>
+  <body>
+    <div class="wrap">
+      <!-- content는 고정 class -->
+      <section class="filter-section">
+        <div class="filter-header">
+          <h2>내게 맞는 상품 찾기</h2>
+          <span>상품 전체보기</span>
+        </div>
+      </section>
+      <main class="main-content">
+        <aside class="sidebar">
+          <div class="filter-category">
+            <div class="filter-title">
+              <h2>스마트 필터</h2>
+            </div>
+            <div class="filter-box">
+              <div class="filter-tit">마감재</div>
+              <div class="filter-list">
+                <div class="filter-option">
+                  <input type="checkbox" value="all" name="fin_mat" checked/>
+                  <span>전체</span>
+                </div>
+                <div class="filter-option">
+                  <input type="checkbox" value="leather" name="fin_mat"/>
+                  <span>가죽</span>
+                </div>
+                <div class="filter-option">
+                  <input type="checkbox" value="fabric" name="fin_mat"/>
+                  <span>패브릭</span>
+                </div>
+              </div>
+            </div>
+            <div class="filter-box">
+              <div class="filter-tit">사이즈</div>
+              <div class="filter-list">
+                <div class="filter-option">
+                  <input type="checkbox" value="all" name="size" checked/>
+                  <span>전체</span>
+                </div>
+                <div class="filter-option">
+                  <input type="checkbox" value="1in" name="size"/>
+                  <span>1인</span>
+                </div>
+                <div class="filter-option">
+                  <input type="checkbox" value="3in" name="size"/>
+                  <span>3인</span>
+                </div>
+                <div class="filter-option">
+                  <input type="checkbox" value="3halfin" name="size"/>
+                  <span>3.5인</span>
+                </div>
+                <div class="filter-option">
+                  <input type="checkbox" value="4in" name="size"/>
+                  <span>4인</span>
+                </div>
+                <div class="filter-option">
+                  <input type="checkbox" value="6in" name="size"/>
+                  <span>6인</span>
+                </div>
+              </div>
+            </div>
+            <div class="filter-box">
+              <div class="filter-tit">타입별</div>
+              <div class="filter-list">
+                <div class="filter-option">
+                  <input type="checkbox" value="all"  name="type" checked/>
+                  <span>전체</span>
+                </div>
+                <div class="filter-option">
+                  <input type="checkbox" value="ilsa" name="type"/>
+                  <span>일자형</span>
+                </div>
+                <div class="filter-option">
+                  <input type="checkbox" value="coner" name="type"/>
+                  <span>코너형</span>
+                </div>
+                <div class="filter-option">
+                  <input type="checkbox" value="cauch" name="type"/>
+                  <span>카우치형</span>
+                </div>
+                <div class="filter-option">
+                  <input type="checkbox" value="coner_cauch" name="type"/>
+                  <span>코너카우치형</span>
+                </div>
+                <div class="filter-option">
+                  <input type="checkbox" value="Module" name="type"/>
+                  <span>모듈형</span>
+                </div>
+                <div class="filter-option">
+                  <input type="checkbox" value="recliner" name="type"/>
+                  <span>리클라이너</span>
+                </div>
+              </div>
+            </div>
+            <div class="filter-box">
+              <div class="filter-tit">기능성</div>
+              <div class="filter-list">
+                <div class="filter-option">
+                  <input type="checkbox" value="all" name="craf" checked/>
+                  <span>전체</span>
+                </div>
+                <div class="filter-option">
+                  <input type="checkbox" value="y" name="craf" />
+                  <span>있음</span>
+                </div>
+                <div class="filter-option">
+                  <input type="checkbox" value="n" name="craf" />
+                  <span>없음</span>
+                </div>
+              </div>
+            </div>
+            <div class="filter-box">
+              <div class="filter-tit">가격대</div>
+              <div class="filter-list">
+                <span class="coupon-standard"
+                  >＊혜택 적용 전 가격 기준</span
+                >
+                <div class="filter-option">
+                  <input type="checkbox" value="all" name="price" checked/>
+                  <span>전체</span>
+                </div>
+                <div class="filter-option">
+                  <input type="checkbox" value="0" name="price"/>
+                  <span>0-200만원</span>
+                </div>
+                <div class="filter-option">
+                  <input type="checkbox" value="200" name="price"/>
+                  <span>200-300만원</span>
+                </div>
+                <div class="filter-option">
+                  <input type="checkbox" value="300" name="price"/>
+                  <span>300-400만원</span>
+                </div>
+                <div class="filter-option">
+                  <input type="checkbox" value="400" name="price"/>
+                  <span>400-500만원</span>
+                </div>
+                <div class="filter-option">
+                  <input type="checkbox" value="500" name="price"/>
+                  <span>500만원 이상</span>
+                </div>
+              </div>
+            </div>
+            <div class="filter-box">
+              <div class="filter-tit">혜택</div>
+              <div class="filter-list">
+                <div class="filter-option">
+                  <input type="checkbox" value="all" name="boon" checked/>
+                  <span>전체</span>
+                </div>
+                <div class="filter-option">
+                  <input type="checkbox" value="sopa" name="boon"/>
+                  <span>할인 소파</span>
+                </div>
+                <div class="filter-option">
+                  <input type="checkbox" value="etc" name="boon"/>
+                  <span>추가 구성품</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </aside>
+        <section class="product-section">
+          <article class="sort-controls">
+            <!-- sort-controls -->
+            <div class="summary-header">
+              <span class="total-products">총 제품 수</span>
+              <span class="products-count">1307</span>
+            </div>
+            <ul>
+              <li><a href="#" class="active">판매 인기순</a></li>
+              <li><a href="#">리뷰 많은순</a></li>
+              <li><a href="#">낮은 가격순</a></li>
+              <li><a href="#">높은 가격순</a></li>
+              <li><a href="#">신상품순</a></li>
+              <li><a href="#">상품명순</a></li>
+            </ul>
+            <select name="" id="">
+              <option value="판매 인기순">판매 인기순</option>
+              <option value="리뷰 많은순">리뷰 많은순</option>
+              <option value="낮은 가격순">낮은 가격순</option>
+              <option value="높은 가격순">높은 가격순</option>
+              <option value="신 상품순">신 상품순</option>
+              <option value="상품명순">상품명순</option>
+            </select>
+          </article>
+          
+          <!-- 필터선택된 리스트 표기하는 article 인데 초기엔 안보임 처리-->
+          <article class="filter_ctl">
+            <div class="checked_tag_box">
+                <!-- 이곳에 필터 선택된 리스트 표기예정
+              <div class="tags" data-value="일자">
+                <span>일자형</span>
+                <div class="xs-close">
+                <img src="./content/img/main/close_icon.svg" alt="" />
+                </div>
+              </div>
+              <div class="tags" data-value="모듈">
+                <span>모듈형</span>
+                  <div class="xs-close">
+                    <img src="./content/img/main/close_icon.svg" alt="" />
+                  </div>
+              </div>
+              <div class="tags" data-name="util" data-value="미기능성">
+                <span>기능성 없음</span>
+                  <div class="xs-close">
+                    <img src="./content/img/main/close_icon.svg" alt="" />
+                  </div>
+                
+              </div>
+              <div class="tags" data-name="price" data-value="500">
+                <span>400-500 만원</span>
+                  <div class="xs-close">
+                    <img src="./content/img/main/close_icon.svg" alt="" />
+                  </div>
+              </div>
+            -->
+            </div>
+            <a href="#none" class="btn_reset" onclick="re_load()">필터 초기화</a>
+          </article> 
+          <article class="product-grid">
+            <div class="product-list">
+              <div class="product-item">
+                <a
+                  href="#"
+                  class="product-image-link"
+                  onclick="loadContent('./sub/goods/goodsDetail.html')"
+                  ><img src="https://picsum.photos/300/240" alt="protoImage"
+                /></a>
+                <a
+                  href="#"
+                  class="product-title-link"
+                  onclick="loadContent('./sub/goods/goodsDetail.html')"
+                  ><p>
+                    뉴 클레버 4인 기능성 비텔로 통가죽 슈렁큰 천연면피 소가죽
+                    소파 + 쿠션 1개
+                  </p></a
+                >
+                <span class="original-price">3,200,000원</span>
+                <div class="price-container">
+                  <div class="price-details">
+                    <b class="discount-percent">10%</b>
+                    <strong class="discounted-price">2,880,000원</strong>
+                  </div>
+                  <button>
+                    <i class="fa-regular fa-heart line"></i>
+                    <i class="fa-solid fa-heart full"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="product-item">
+                <a
+                  href="#"
+                  class="product-image-link"
+                  onclick="loadContent('./sub/goods/goodsDetail.html')"
+                  ><img src="https://picsum.photos/300/240" alt="protoImage"
+                /></a>
+                <a
+                  href="#"
+                  class="product-title-link"
+                  onclick="loadContent('./sub/goods/goodsDetail.html')"
+                  ><p>
+                    뉴 클레버 4인 기능성 비텔로 통가죽 슈렁큰 천연면피 소가죽
+                    소파 + 쿠션 1개
+                  </p></a
+                >
+                <span class="original-price">3,200,000원</span>
+                <div class="price-container">
+                  <div class="price-details">
+                    <b class="discount-percent">10%</b>
+                    <strong class="discounted-price">2,880,000원</strong>
+                  </div>
+                  <button>
+                    <i class="fa-regular fa-heart line"></i>
+                    <i class="fa-solid fa-heart full"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="product-item">
+                <a
+                  href="#"
+                  class="product-image-link"
+                  onclick="loadContent('./sub/goods/goodsDetail.html')"
+                  ><img src="https://picsum.photos/300/240" alt="protoImage"
+                /></a>
+                <a
+                  href="#"
+                  class="product-title-link"
+                  onclick="loadContent('./sub/goods/goodsDetail.html')"
+                  ><p>
+                    뉴 클레버 4인 기능성 비텔로 통가죽 슈렁큰 천연면피 소가죽
+                    소파 + 쿠션 1개
+                  </p></a
+                >
+                <span class="original-price">3,200,000원</span>
+                <div class="price-container">
+                  <div class="price-details">
+                    <b class="discount-percent">10%</b>
+                    <strong class="discounted-price">2,880,000원</strong>
+                  </div>
+                  <button>
+                    <i class="fa-regular fa-heart line"></i>
+                    <i class="fa-solid fa-heart full"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="product-item">
+                <a
+                  href="#"
+                  class="product-image-link"
+                  onclick="loadContent('./sub/goods/goodsDetail.html')"
+                  ><img src="https://picsum.photos/300/240" alt="protoImage"
+                /></a>
+                <a
+                  href="#"
+                  class="product-title-link"
+                  onclick="loadContent('./sub/goods/goodsDetail.html')"
+                  ><p>
+                    뉴 클레버 4인 기능성 비텔로 통가죽 슈렁큰 천연면피 소가죽
+                    소파 + 쿠션 1개
+                  </p></a
+                >
+                <span class="original-price">3,200,000원</span>
+                <div class="price-container">
+                  <div class="price-details">
+                    <b class="discount-percent">10%</b>
+                    <strong class="discounted-price">2,880,000원</strong>
+                  </div>
+                  <button>
+                    <i class="fa-regular fa-heart line"></i>
+                    <i class="fa-solid fa-heart full"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="product-item">
+                <a
+                  href="#"
+                  class="product-image-link"
+                  onclick="loadContent('./sub/goods/goodsDetail.html')"
+                  ><img src="https://picsum.photos/300/240" alt="protoImage"
+                /></a>
+                <a
+                  href="#"
+                  class="product-title-link"
+                  onclick="loadContent('./sub/goods/goodsDetail.html')"
+                  ><p>
+                    뉴 클레버 4인 기능성 비텔로 통가죽 슈렁큰 천연면피 소가죽
+                    소파 + 쿠션 1개
+                  </p></a
+                >
+                <span class="original-price">3,200,000원</span>
+                <div class="price-container">
+                  <div class="price-details">
+                    <b class="discount-percent">10%</b>
+                    <strong class="discounted-price">2,880,000원</strong>
+                  </div>
+                  <button>
+                    <i class="fa-regular fa-heart line"></i>
+                    <i class="fa-solid fa-heart full"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="product-item">
+                <a
+                  href="#"
+                  class="product-image-link"
+                  onclick="loadContent('./sub/goods/goodsDetail.html')"
+                  ><img src="https://picsum.photos/300/240" alt="protoImage"
+                /></a>
+                <a
+                  href="#"
+                  class="product-title-link"
+                  onclick="loadContent('./sub/goods/goodsDetail.html')"
+                  ><p>
+                    뉴 클레버 4인 기능성 비텔로 통가죽 슈렁큰 천연면피 소가죽
+                    소파 + 쿠션 1개
+                  </p></a
+                >
+                <span class="original-price">3,200,000원</span>
+                <div class="price-container">
+                  <div class="price-details">
+                    <b class="discount-percent">10%</b>
+                    <strong class="discounted-price">2,880,000원</strong>
+                  </div>
+                  <button>
+                    <i class="fa-regular fa-heart line"></i>
+                    <i class="fa-solid fa-heart full"></i>
+                  </button>
+
+                </div>
+              </div>
+              <div class="product-item">
+                <a
+                  href="#"
+                  class="product-image-link"
+                  onclick="loadContent('./sub/goods/goodsDetail.html')"
+                  ><img src="https://picsum.photos/300/240" alt="protoImage"
+                /></a>
+                <a
+                  href="#"
+                  class="product-title-link"
+                  onclick="loadContent('./sub/goods/goodsDetail.html')"
+                  ><p>
+                    뉴 클레버 4인 기능성 비텔로 통가죽 슈렁큰 천연면피 소가죽
+                    소파 + 쿠션 1개
+                  </p></a
+                >
+                <span class="original-price">3,200,000원</span>
+                <div class="price-container">
+                  <div class="price-details">
+                    <b class="discount-percent">10%</b>
+                    <strong class="discounted-price">2,880,000원</strong>
+                  </div>
+                  <button>
+                    <i class="fa-regular fa-heart line"></i>
+                    <i class="fa-solid fa-heart full"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="product-item">
+                <a
+                  href="#"
+                  class="product-image-link"
+                  onclick="loadContent('./sub/goods/goodsDetail.html')"
+                  ><img src="https://picsum.photos/300/240" alt="protoImage"
+                /></a>
+                <a
+                  href="#"
+                  class="product-title-link"
+                  onclick="loadContent('./sub/goods/goodsDetail.html')"
+                  ><p>
+                    뉴 클레버 4인 기능성 비텔로 통가죽 슈렁큰 천연면피 소가죽
+                    소파 + 쿠션 1개
+                  </p></a
+                >
+                <span class="original-price">3,200,000원</span>
+                <div class="price-container">
+                  <div class="price-details">
+                    <b class="discount-percent">10%</b>
+                    <strong class="discounted-price">2,880,000원</strong>
+                  </div>
+                  <button>
+                    <i class="fa-regular fa-heart line"></i>
+                    <i class="fa-solid fa-heart full"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="product-item">
+                <a
+                  href="#"
+                  class="product-image-link"
+                  onclick="loadContent('./sub/goods/goodsDetail.html')"
+                  ><img src="https://picsum.photos/300/240" alt="protoImage"
+                /></a>
+                <a
+                  href="#"
+                  class="product-title-link"
+                  onclick="loadContent('./sub/goods/goodsDetail.html')"
+                  ><p>
+                    뉴 클레버 4인 기능성 비텔로 통가죽 슈렁큰 천연면피 소가죽
+                    소파 + 쿠션 1개
+                  </p></a>
+                <span class="original-price">3,200,000원</span>
+                <div class="price-container">
+                  <div class="price-details">
+                    <b class="discount-percent">10%</b>
+                    <strong class="discounted-price">2,880,000원</strong>
+                  </div>
+                  <button>
+                    <i class="fa-regular fa-heart line"></i>
+                    <i class="fa-solid fa-heart full"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </article>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

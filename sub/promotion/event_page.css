@@ -1,0 +1,99 @@
+/* * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        } */
+
+/* body, html {
+            height: 100%;
+        } */
+
+main {
+    background-color: #f7f7f7;
+    height: 100%;
+    /* 전체 화면을 위한 설정 */
+}
+
+.event-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    height: 100vh;
+    position: relative;
+}
+
+.event-banner img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+}
+
+.event-content {
+    position: relative;
+    z-index: 1;
+    padding-bottom: 100px;
+    text-align: center;
+    padding: 20px 50px 100px 50px;
+}
+
+.event-content h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.event-content p {
+    font-size: 1.2rem;
+    color: #fff;
+    margin-bottom: 300px;
+}
+
+/* 800px 이하일 때 */
+@media screen and (max-width: 800px) {
+    .event-content h1 {
+        font-size: 1.8rem;
+        margin-bottom: 8px;
+    }
+
+    .event-content p {
+        font-size: 1rem;
+        margin-bottom: 200px;
+    }
+
+    .event-banner img {
+        width: 100vw;
+        height: 100vh;
+        object-fit: cover;
+    }
+}
+
+/* 480px 이하일 때 */
+@media screen and (max-width: 480px) {
+    .event-content {
+        padding: 20px 50px 100px 50px;
+        font-size: 1.8rem;
+    }
+
+    .event-content h1 {
+        font-size: 1.5rem;
+        margin-bottom: 6px;
+    }
+
+    .event-content p {
+        font-size: 0.9rem;
+        margin-bottom: 150px;
+    }
+
+    .event-banner img {
+        width: 100vw;
+        height: 100vh;
+        object-fit: cover;
+    }
+}
