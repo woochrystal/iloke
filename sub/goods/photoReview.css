@@ -1,0 +1,460 @@
+* {
+    font-family: "Noto Sans KR", "Roboto";
+}
+
+.wrap {
+    background-color: #fff;
+}
+
+.photo-review-main .photo-review-area {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    overflow: hidden;
+    margin: 0 auto;
+    padding: 0 5px 50px 5px;
+}
+
+/* 포토리뷰 헤더 default.css 연동, css filter-header에 연결되서 코드 줄 필요 없음 */
+
+.photo-review-main .photo-review-section {
+    width: 100%;
+}
+
+/* 서브 타이틀 */
+.photo-review-main .photo-review-subtitle h2 {
+    font-size: 1.5rem;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #f5f5f5;
+}
+
+/* 포토리뷰 도구 모음 */
+.photo-review-main .photo-review-tools {
+    display: flex;
+    align-items: center;
+    padding: 20px 10px;
+}
+
+.photo-review-main .photo-review-tools select {
+    width: 150px;
+    height: 40px;
+    padding-left: 5px;
+    border: 1px solid #ccc;
+}
+
+.photo-review-main .photo-review-tools input {
+    width: 200px;
+    height: 40px;
+    margin: 0 10px;
+    padding: 0 10px;
+    font-size: 0.8rem;
+    border: 1px solid #ccc;
+}
+
+.photo-review-main .photo-review-tools a {
+    display: flex;
+    justify-content: center;
+    width: 140px;
+    height: 40px;
+    line-height: 40px;
+    background-color: #06ADC3;
+    color: #fff;
+    font-size: 0.8rem;
+}
+
+.photo-review-main .photo-review-tools a:hover {
+    background-color: #005D75;
+}
+
+.photo-review-main .photo-review-tools a::after {
+    content: '\f002';
+    font-family: FontAwesome;
+    margin: 0 5px;
+    font-size: 1.2rem;
+    line-height: 40px;
+}
+
+/* 리뷰 박스 */
+.photo-review-main .photo-review-thumnail {
+    width: calc(100% / 4);
+    border: 1px solid #F5F5F5;
+    padding: 5px;
+}
+
+/* 리뷰 이미지박스 */
+.photo-review-main .photo-review-thumnail .photo-review-image {
+    position: relative;
+}
+
+.photo-review-main .photo-review-thumnail .photo-review-image img {
+    width: 100%;
+    display: block;
+}
+
+.photo-review-main .photo-review-thumnail .photo-review-image .review-image-count {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 34px;
+    height: 34px;
+    display: block;
+    background-color: #000;
+    text-align: center;
+    line-height: 34px;
+    color: #fff;
+    font-size: 0.8rem;
+}
+
+.photo-review-main .photo-review-thumnail .photo-review-imagebox .photo-review-text {
+    margin: 10px;
+}
+
+.photo-review-main .photo-review-thumnail .photo-review-imagebox .photo-review-text span {
+    font-size: 0.8rem;
+    color: #767676;
+}
+
+
+/* 리뷰 소개박스 */
+
+.photo-review-main .photo-review-thumnail .photo-review-info {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    border-top: 1px solid #F5F5F5;
+}
+
+.photo-review-main .photo-review-thumnail .photo-review-info img {
+    padding: 10px;
+}
+
+.photo-review-main .photo-review-thumnail .photo-review-info .photo-review-content strong {
+    font-size: 0.8rem;
+}
+
+/* 상품 정보 평가, 리뷰 */
+.photo-review-main .photo-review-thumnail .photo-review-info .photo-review-content .review-details {
+    display: flex;
+    justify-content: flex-start;
+    margin: 3px 0;
+}
+
+.photo-review-main .photo-review-thumnail .photo-review-info .photo-review-content .review-details .review-rating-title {
+    font-size: 0.8rem;
+}
+
+.photo-review-main .photo-review-thumnail .photo-review-info .photo-review-content .review-details .review-rating {
+    font-size: 0.8rem;
+    margin: 0 5px;
+    color: #8F364D;
+}
+
+.photo-review-main .photo-review-thumnail .photo-review-info .photo-review-content .review-details .review-text {
+    font-size: 0.8rem;
+    margin: 0 5px;
+}
+
+.photo-review-main .photo-review-thumnail .photo-review-info .photo-review-content .review-details .review-count {
+    font-size: 0.8rem;
+    color: #8F364D;
+}
+
+
+/* 상품 정보 날짜, 작성 */
+.photo-review-main .photo-review-thumnail .photo-review-info .photo-review-content .review-meta {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.photo-review-main .photo-review-thumnail .photo-review-info .photo-review-content .review-meta .review-date-title {
+    font-size: 0.8rem;
+}
+
+.photo-review-main .photo-review-thumnail .photo-review-info .photo-review-content .review-meta .review-date {
+    font-size: 0.8rem;
+    margin: 0 5px;
+    letter-spacing: -1px;
+    color: #767676;
+}
+
+.photo-review-main .photo-review-thumnail .photo-review-info .photo-review-content .review-meta .review-writer-title {
+    font-size: 0.8rem;
+    margin: 0 5px;
+}
+
+.photo-review-main .photo-review-thumnail .photo-review-info .photo-review-content .review-meta .review-writer-id {
+    font-size: 0.8rem;
+    color: #767676;
+}
+
+.photo-review-main .pagination-container {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+    padding: 30px 0;
+}
+
+.photo-review-main .pagination-container .pagination-controls ul {
+    display: flex;
+}
+
+.photo-review-main .pagination-container .pagination-controls ul li {
+    display: flex;
+    align-items: center;
+    line-height: 25px;
+}
+
+.photo-review-main .pagination-container .pagination-controls ul li a {
+    padding: 0 6px;
+    margin: 0 3px;
+    font-size: 0.8rem;
+}
+
+.photo-review-main .pagination-container .pagination-controls ul li .current {
+    background-color: #005D75;
+    display: block;
+    width: 25px;
+    height: 25px;
+    text-align: center;
+    color: #fff;
+    font-size: 1rem;
+    line-height: 25px;
+}
+
+.photo-review-main .pagination-container .pagination-controls ul .pagination-next a,
+.photo-review-main .pagination-container .pagination-controls ul .pagination-last a {
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
+    text-align: center;
+}
+
+/* 모달 레이어 */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 10;
+    padding-top: 150px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal .modal-content {
+    position: relative;
+    background-color: #fff;
+    margin: 20px auto;
+    padding: 20px;
+    width: 50%;
+    height: auto;
+}
+
+.modal .modal-content .close {
+    position: absolute;
+    top: 0;
+    right: -45px;
+    width: 45px;
+    height: 45px;
+    font-size: 2rem;
+    background-color: #F294B2;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    line-height: 20px;
+}
+
+.modal .modal-content .close:hover {
+    background-color: #8F364D;
+}
+
+.modal .modal-content .modal-box {
+    position: relative;
+    width: 95%;
+    top: 0;
+    left: 0;
+    background-color: #f5f5f5;
+    margin: 20px auto;
+}
+
+.modal .modal-content .modal-box img {
+    text-align: center;
+    margin: 0 auto;
+    display: flex;
+    width: 100%;
+}
+
+.modal .modal-content .modal-detail-box {
+    width: 95%;
+    padding: 10px 0;
+    border-top: 1px solid #f5f5f5;
+    border-bottom: 1px solid #f5f5f5;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* 모달리뷰 하단 썸네일 */
+.modal .modal-content .modal-detail-box .modal-review-thumnail {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.modal .modal-content .modal-detail-box .modal-review-star {
+    color: #8F364D;
+}
+
+.modal .modal-content .modal-detail-box .modal-review-thumnail .modal-review-meta {
+    display: flex;
+    justify-content: flex-start;
+    padding: 7px 0 2px 0;
+}
+
+.modal .modal-content .modal-detail-box .modal-review-thumnail .modal-review-meta .modal-review-rating-title {
+    font-size: 0.8rem;
+}
+
+.modal .modal-content .modal-detail-box .modal-review-thumnail .modal-review-meta .modal-review-rating {
+    font-size: 0.8rem;
+    margin: 0 2px;
+    color: #8F364D;
+}
+
+.modal .modal-content .modal-detail-box .modal-review-thumnail .modal-review-meta .modal-review-text {
+    font-size: 0.8rem;
+    margin: 0 2px;
+}
+
+.modal .modal-content .modal-detail-box .modal-review-thumnail .modal-review-meta .modal-review-count {
+    font-size: 0.8rem;
+    color: #8F364D;
+}
+
+/* 모달리뷰 하단 썸네일 리뷰 */
+.modal .modal-content .modal-detail-box .modal-review-text-box {
+    width: 75%;
+}
+
+.modal .modal-content .modal-detail-box .modal-review-text-box .modal-review-options {
+    padding: 20px 10px;
+    margin: 10px 0;
+    background-color: #f5f5f5;
+}
+
+.modal .modal-content .modal-detail-box .modal-review-text-box .modal-review-options dl {
+    display: flex;
+    width: 100%;
+    padding: 10px 20px;
+    
+}
+
+.modal .modal-content .modal-detail-box .modal-review-text-box .modal-review-options dl dt {
+    display: inline-block;
+    width: 100px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.modal .modal-content .modal-detail-box .modal-review-text-box .modal-review-options dl dd {
+    width: 90%;
+    font-size: 0.8rem;
+}
+
+
+.modal .modal-content .modal-detail-box .modal-review-text-box .modal-review-text-title {
+    display: block;
+    width: 100%;
+    padding: 10px 0;
+    font-size: 1rem;
+    letter-spacing: -1px;
+}
+
+.modal .modal-content .modal-detail-box .modal-review-text-box .modal-review-explan {
+    font-size: 1rem;
+    line-height: 22px;
+    letter-spacing: -1px;
+    margin: 15px 0;
+}
+
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+  
+.close:hover, .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+@media screen and (max-width:1200px) {
+    .photo-review-main .photo-review-thumnail {
+        width: calc(100% / 3);
+    }
+
+    .modal .modal-content {
+        width: 70%;
+    }
+
+    .modal .modal-content .modal-detail-box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .modal .modal-content .modal-detail-box .modal-review-thumnail {
+        width: 100%;
+    }
+
+    .modal .modal-content .modal-detail-box .modal-review-text-box {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:800px) {
+    .photo-review-main .photo-review-thumnail {
+        width: calc(100% / 2);
+    }
+
+    .modal .modal-content {
+        width: 100%;
+        padding: 50px;
+    }
+
+    .modal .modal-content .close {
+        right: 0;
+    }
+
+    .photo-review-main .photo-review-tools {
+        flex-direction: column;
+    }
+
+    .photo-review-main .photo-review-tools select {
+        width: 100%;
+    }
+
+    .photo-review-main .photo-review-tools input {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .photo-review-main .photo-review-tools a {
+        width: 100%;
+    }
+
+    
+}
+
+@media screen and (max-width:480px) {
+    .photo-review-main .photo-review-thumnail {
+        width: 100%;
+    }
+}

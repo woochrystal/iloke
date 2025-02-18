@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/sub/order/order.css">
+    <script src="/sub/order/order.js"></script>
+</head>
+<body>
+    <div class="content_jh">
+        <div class="filter-header">
+            <h2>주문서작성/결제</h2>
+        </div>
+        <!-- <div class="order_top">
+            <p>주문서작성/결제</p>
+        </div> -->
+        <div class="order_top2">
+            <ol>
+                <li>
+                    <span>01 장바구니</span>
+                </li>
+                <li class="bold_li">
+                    <span>02 주문서작성/결제</span>
+                </li>
+                <li>
+                    <span>03 주문완료</span>
+                </li>
+            </ol>
+        </div>
+            
+        <div class="order_tit">
+            <p>주문상세내역</p>
+        </div>
+
+        <div class="table_div">
+            <table class="list_table">
+                <tr>
+                    <th>상품/옵션 정보</th>
+                    <th>수량</th>
+                    <th>상품금액</th>
+                    <th>할인/적립</th>
+                    <th>합계금액</th>
+                    <th>배송비</th>
+                </tr>
+                <tr>
+                    <td class="name_td">
+                        <img src="/content/img/main/main_product03.jpg" alt="" style="width: 40px; height: 32px;">
+                        이로케 1인 천연면피 소가죽 소파
+                    </td>
+                    <td class="amount_td">1개</td>
+                    <td class="price_td">2,610,000원</td>
+                    <td class="discount_td"></td>
+                    <td class="tot_price_td">2,610,000원</td>
+                    <td class="delivery_td" rowspan='3'>자체배송<br/>무료배송<br/>(택배)</td>
+                </tr>
+                <tr>
+                    <td class="name_td">
+                        <img src="/content/img/main/main_product04.jpg" alt="" style="width: 40px; height: 32px;">
+                        BROGRUND 브로그룬드
+                    </td>
+                    <td class="amount_td">1개</td>
+                    <td class="price_td">15,000원</td>
+                    <td class="discount_td"></td>
+                    <td class="tot_price_td">15,000원</td>
+                    <!-- <td class="delivery_td">자체배송<br/>무료배송<br/>(택배)</td> -->
+                </tr>
+                <tr>
+                    <td class="name_td">
+                        <img src="/content/img/main/main_product07.jpg" alt="" style="width: 40px; height: 32px;">
+                        TELEGRAFLINJE 텔레그라플리니에
+                    </td>
+                    <td class="amount_td">1개</td>
+                    <td class="price_td">180,000원</td>
+                    <td class="discount_td"></td>
+                    <td class="tot_price_td">180,000원</td>
+                    <!-- <td class="delivery_td">자체배송<br/>무료배송<br/>(택배)</td> -->
+                </tr>
+            </table>
+        </div>
+
+        <div class="btn_div">
+            <button type="button" class="cart_button" id="cart_btn" onclick="loadContent('./sub/order/cart.html')">장바구니 가기</button>
+        </div>
+        
+
+        <div class="price_div">
+            <div class="price_sum_right">
+                <div class="left_div">
+                    <div>총 3 개의 상품금액</div>
+                    <div class="left_price">2,805,000원</div>
+                </div>
+                <div class="symbol_left_div"><i class="fa-solid fa-circle-plus fa-lg " style="color: #cccccc;"></i></div>
+                <div class="center_div">
+                    <div>배송비</div>
+                    <div class="center_price">0원</div>
+                </div>
+                <div class="symbol_right_div"><i class="fa-solid fa-circle-pause fa-rotate-90 fa-lg" style="color: #767676;"></i></div>
+                <div class="right_div">
+                    <div>합계</div>
+                    <div class="right_price">2,805,000원</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="order_tit">
+            <p>주문자 정보</p>
+        </div>
+
+        <div class="orderer_table_div">
+            <table class="orderer_table">
+                <tr>
+                    <th><i id="order_i" class="fa-solid fa-square fa-2xs" style="color: #F294B2;"></i>주문하시는 분</th>
+                    <td>
+                        <input type="text" name="orderer_name" value="손재훈" id="input220">    
+                    </td>
+                </tr>
+                <tr>
+                    <th>&nbsp;&nbsp;&nbsp;&nbsp;주소</th>
+                    <td>
+                        [06626] 서울 서초구 서초대로78길 48 (송림빌딩)
+                    </td>
+                </tr>
+                <tr>
+                    <th>&nbsp;&nbsp;&nbsp;&nbsp;전화번호</th>
+                    <td>
+                        <input type="text" value="" id="input220">    
+                    </td>
+                </tr>
+                <tr>
+                    <th><i id="order_i" class="fa-solid fa-square fa-2xs" style="color: #F294B2;"></i>휴대폰 번호</th>
+                    <td>
+                        <input type="text" name="orderer_phone" value="010-3434-5757" id="input220">    
+                    </td>
+                </tr>
+                <tr>
+                    <th><i id="order_i" class="fa-solid fa-square fa-2xs" style="color: #F294B2;"></i>이메일</th>
+                    <td>
+                        <input type="text" name="orderer_email" value="bmnbjo@gmail.com" id="input220">    
+                    </td>
+                </tr>
+                
+            </table>
+        </div>
+        
+        <div class="order_tit">
+            <p>배송정보</p>
+        </div>
+
+        <div class="delivery_table_div">
+            <table class="delivery_table">
+                <!-- <tr>
+                    <th>&nbsp;&nbsp;&nbsp;&nbsp;배송지 확인</th>
+                    <td>
+                        서울시 어디어디입니다 
+                    </td>
+                </tr> -->
+                <tr>
+                    <th><i id="order_i" class="fa-solid fa-square fa-2xs" style="color: #F294B2;"></i>받으실 분</th>
+                    <td>
+                        <input type="text" name="recipient_name" value="" id="input220">    
+                    </td>
+                </tr>
+                <tr>
+                    <th><i id="order_i" class="fa-solid fa-square fa-2xs" style="color: #F294B2;"></i>받으실 곳</th>
+                    <td>
+                        <!-- <input type="text" value="51779" id="zip_code_text"> 
+                        <button type="button" name="recipient_zip" id="zip_code_button">우편번호검색</button>
+                        <br/>    -->
+                        <input type="text" name="recipient_address" value="" id="long_address">    
+                        <!-- <input type="text" name="recipient_detail" value="2323" id="short_address">     -->
+                    </td>
+                </tr>
+                <tr>
+                    <th>&nbsp;&nbsp;&nbsp;&nbsp;전화번호</th>
+                    <td>
+                        <input type="text" value="" class="input220px" id="myset">    
+                    </td>
+                </tr>
+                <tr>
+                    <th><i id="order_i" class="fa-solid fa-square fa-2xs" style="color: #F294B2;"></i>휴대폰 번호</th>
+                    <td>
+                        <input type="text" name="recipient_phone" value="" id="input220">    
+                    </td>
+                </tr>
+                <tr>
+                    <th>&nbsp;&nbsp;&nbsp;&nbsp;남기실 말씀</th>
+                    <td>
+                        <input type="text" value="" id="long_comment">    
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="order_tit">
+            <p>결제정보</p>
+        </div>       
+
+        <div class="payment_table_div">
+            <table class="payment_table">
+                <tr>
+                    <th>&nbsp;&nbsp;&nbsp;&nbsp;상품 합계 금액</th>
+                    <td>
+                        2,805,000원   
+                    </td>
+                </tr>
+                <tr>
+                    <th>&nbsp;&nbsp;&nbsp;&nbsp;배송비</th>
+                    <td>
+                        0원   
+                    </td>
+                </tr>
+                <tr>
+                    <th>&nbsp;&nbsp;&nbsp;&nbsp;할인 및 적립</th>
+                    <td>
+                        적립 마일리지
+                    </td>
+                </tr>
+                <tr>
+                    <th>&nbsp;&nbsp;&nbsp;&nbsp;쿠폰 사용</th>
+                    <td>
+                        쿠폰 조회 및 적용
+                    </td>
+                </tr>
+                <tr>
+                    <th>&nbsp;&nbsp;&nbsp;&nbsp;마일리지 사용</th>
+                    <td>
+                        <input type="text" value="" id="mileage" id="input220">&nbsp;점
+                        <span>(보유 마일리지 : 10,000점)</span>
+                    </td>
+                </tr>
+                <tr>
+                    <th>&nbsp;&nbsp;&nbsp;&nbsp;예치금 사용</th>
+                    <td>
+                        <input type="text" value="" id="deposit" id="input220">&nbsp;원
+                        <span>(보유 예치금 : 1,000원)</span>
+                    </td>
+                </tr>
+                <tr>
+                    <th>&nbsp;&nbsp;&nbsp;&nbsp;최종 결제 금액</th>
+                    <td id="total_price">
+                        2,805,000원
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="order_tit">
+            <p>결제수단 선택 / 결제</p>
+        </div>
+
+        <div class="payment_method_div">
+            <div class="payment_left_div">일반결제</div>
+            <div class="payment_right_div">
+                <ul>
+                    <li>
+                        <input type="radio" checked>
+                        <label for="">무통장 입금</label>
+                    </li>
+                    <!-- <li>
+                        <input type="radio">
+                        <label for="">신용카드</label>
+                    </li> -->
+                </ul>
+            </div>
+        </div>
+
+        <div class="tot_amount_div">
+            <div class="tot_amount_div_right">
+                <div class="tot_left">최종 결제 금액</div>
+                <div class="tot_right">2,805,000원</div>
+            </div>
+        </div>
+
+        <div class="agreement_div">
+            <div class="agreement_top">
+                <input type="checkbox" id="agree_chk" name="agree">
+                <label for="agree_chk">
+                    <em>
+                        <b>(필수)</b>
+                        소비자
+                        <b>위약금 부과</b>에 대한 고지와 구매하실 상품의 
+                        <b>결제정보</b>를 확인하였으며, 구매진행에 동의합니다.
+                    </em>
+                </label>
+            </div>
+            <div class="agreement_bottom">
+                <p>소비자 위약금 부과에 대한 고지</p>
+                자코모 소파는 제품의 디자인별 • 색상별 • 가죽 종류별 • 고객 요청사항 등 주문 요건에 따라 각각 완성되는 제품이 달라지는 특이사항으로,
+                <br/>
+                고객이 제품을 주문한 날(결제가 완료된 날)로부터 3일 후 제작에 착수하는 '주문제작상품'입니다.
+                <br/>
+                근거법률(전자상거래 등에서의 소비자보호에 관한 법률 제17조 제2항 제6호, 동법 제19조, 동법 시행령 제21조)에 따라 ‘청약의 철회가 제한되는 재화'에 해당하므로,
+                <br/>
+                주문청약 취소 요청 시 고객님께 <b>위약금이 부과되거나 교환 • 반품이 불가할 수 있으니</b> 구매 결정 이전, 제품의 온라인 상 상세페이지의 내용(제품 특성 및 명시사항 등)을 반드시 확인해주시기 바랍니다.
+            </div>
+        </div>
+
+        <div class="order_btn_div">
+            <button type="button" class="order_btn">결제하기</button>
+        </div>
+
+    </div>
+
+    
+   
+</body>
+
+</html>

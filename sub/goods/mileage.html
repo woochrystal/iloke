@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>project</title>
+    
+    <link rel="stylesheet" href="./sub/goods/coupon-mileage-balance.css">
+    <script src="./sub/goods/myPage.js"></script>
+</head>
+<body>
+    <div class="wrap">
+        <main class="main-content">
+            <section class="coupon">
+                <article class="coupon-top-wrap">
+                    <div class="coupon-top-info">
+                        <span class="coupon-top-text">***님의</span>
+                        <p class="coupon-top-grade">회원 등급은 <span class="coupon-grade">일반회원등급</span> 입니다.</p>
+                    </div>
+                    <div class="coupon-top-wallet">
+                        <ul class="coupon-top-wallet-wrap">
+                            <li class="coupon-top-mileage">
+                                <img src="../../content/img/sample/icon_mileage.png" class="coupon-mileage" alt="마일리지 아이콘" />
+                                <b class="coupon-title">마일리지</b>
+                                <span class="coupon-count"><a href="#" onclick="loadContent('./sub/goods/mileage.html')">20,000</a>점</span>
+                            </li>
+                            <li class="coupon-top-balance">
+                                <img src="../../content/img/sample/icon_balance.png" class="coupon-balance" alt="예치금 아이콘" />
+                                <b class="coupon-title">예치금</b>
+                                <span class="coupon-count"><a href="#" onclick="loadContent('./sub/goods/deposit.html')">0</a>원</span>
+                            </li>
+                        </ul>
+                    </div>
+                </article>
+                <article class="mypage-date-wrap">
+                    <div class="mypage-date-check">
+                        <div class="mypage-date-period">
+                            <span class="mypage-period-btn">조회기간</span>
+                            <button data-value="0" value="2024-09-24">오늘</button>
+                            <button data-value="7">7일</button>
+                            <button data-value="15">15일</button>
+                            <button data-value="30">1개월</button>
+                            <button data-value="90">3개월</button>
+                            <button data-value="365">1년</button>
+                        </div>
+                        <div class="mypage-date-box">
+                            <input id="start-date" type="date" />&nbsp; - &nbsp;
+                            <input id="last-date" type="date" />
+                        </div>
+                        <div class="mypage-date-search">
+                            <span class="mypage-date-search-btn" onclick="validateDates()">조회</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="coupon-select-wrap">
+                    <div class="pick-list">
+                        <strong>2024-09-19 ~ 2024-09-25</strong><span>까지의 마일리지내역</span>
+                    </div>
+                    <table class="order-table">
+                        <colgroup>
+                            <col style="width:15%">
+                            <col style="width:15%">
+                            <col>
+                            <col style="width:18%">
+                            <col style="width:10%">
+                            <col style="width:15%">
+                        </colgroup>
+                        <tr class="mileage-header">
+                            <th class="header-date">날짜</th>
+                            <th class="header-title">유형</th>
+                            <th class="header-money">내용</th>
+                            <th class="header-order">유효기간</th>
+                            <th class="header-check">마일리지 내역</th>
+                            <th class="header-remain">잔여 마일리지</th>
+                        </tr>
+                        <tr class="order-info">
+                            <td class="order-details">
+                                <ul>
+                                    <p>2024-09-17</p>
+                                </ul>
+                            </td>
+                            <td>
+                                <span class="order-title">10% 상품할인</span>
+                            </td>
+                            <td class="order-deposit">
+                                자코모몰 전용 소파 마일리지
+                            </td>
+                            <td class="order-review">
+                                <div class="order-review-button">
+                                    <span>2024-09-17 2024 ~2024-10-17 2024</span>
+                                    <b href="#">사용가능</b>
+                                </div>
+                            </td>
+                            <td>
+                                20,000원
+                            </td>
+                            <td>
+                                20,000원
+                            </td>
+                        </tr>
+                    </table>
+                </article>
+            </section>
+        </main>
+    </div>
+</body>
+</html>

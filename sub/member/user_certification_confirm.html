@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/sub/member/user_certification_confirm.css">
+    <script src="/sub/member/user_certification_confirm.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <section>
+        <div class="container">
+            <div class="title">본인인증</div>
+            <div class="find_msg_div">
+                <i id="mypage_i" class="fa-regular fa-user fa-2xl" style="color: #F294B2;"></i>
+                <p>수신된 이메일의 인증번호를 입력해 주세요.</p>
+            </div>
+            <div class="input_id_div">  
+                <input type="text" id="id_input" placeholder="인증번호 입력" required>
+                    <p>인증메일이 도착하지 않았나요? 
+                        <strong style="text-decoration: underline; cursor: pointer;" onclick="alert('다시 전송하였습니다.');">
+                            인증번호 다시받기
+                        </strong>
+                    </p>
+            </div>
+
+            <div class="next_btn_div"> 
+                <button type="button" id="previous_btn">이전</button>
+                <button type="button" id="next_btn">확인</button>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
