@@ -112,7 +112,7 @@ app.use('/mall/boards', boardRoutes);  // 게시판 관련 라우터
 
 // 에러 핸들링 미들웨어
 app.use((err, req, res, next) => {
-    console.error(err.stack); // 에러 스택 출력
+    console.error('에러 스택 : ',err.stack); // 에러 스택 출력
     const status = err.status || 500;
     res.status(status).json({
         success: false,
@@ -121,6 +121,7 @@ app.use((err, req, res, next) => {
 });
 
 const PORT = process.env.PORT || 5000;
+console.log('PORT이름 : ',PORT); // 
 app.listen(PORT, () => {
-    console.log(`Server running ion port ${PORT}`);
+    console.log(`서버 실행 완료 : ${PORT}`);
 });

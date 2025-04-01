@@ -214,15 +214,15 @@ function BoardPromotionPage() {
           </div>
         ))}
       </div>
-      <div>
-        <button
+      {/* <div>
+        { <button
           type="button"
           className="write-btn"
-          onClick={() => handleRowClick(null, null, null, selectedCode)}
+          // onClick={() => handleRowClick(null, null, null, selectedCode)}
         >
           신규 등록
-        </button>
-      </div>
+        </button> }
+      </div> */}
       <PaginationControls
         currentPage={currentPage}
         totalPages={totalPages}

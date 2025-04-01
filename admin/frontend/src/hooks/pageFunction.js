@@ -49,10 +49,10 @@ function useContent(path) {
         setContent(<KeywordPage />); // 키워드관리
       } else if (path === "/member") {
         setContent(<MemberPage />); // 멤버관리
-      } else if (path === "/mileage") {
-        setContent(<MileagePage />); // 마일리지관리
-      } else if (path === "/deposit") {
-        setContent(<DepositPage />); // 예치금관리
+      // } else if (path === "/mileage") {
+      //   setContent(<MileagePage />); // 마일리지관리
+      // } else if (path === "/deposit") {
+      //   setContent(<DepositPage />); // 예치금관리
       } else if (path === "/order") {
         setContent(<OrderPage />); // 주문관리
       } else if (path === "/settle") {

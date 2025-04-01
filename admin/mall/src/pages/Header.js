@@ -43,7 +43,6 @@ function Header() {
     //navigate('/'); // 메인 페이지로 이동
     window.location.href = '/';
   };
-  // console.log(process.env.REACT_APP_BACK_URL)
 
   return (
     <header className="on">

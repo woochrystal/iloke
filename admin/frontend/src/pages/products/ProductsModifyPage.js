@@ -82,13 +82,14 @@ function ProductsModifyPage({ id, myData, code }) {
         //최종가가 마이너스거나 할인율이 100퍼 넘을 때
         alert("할인율을 다시 입력하세요.");
         return setDisV(0);
-      } else if (disV == 100) {
-        //할인율 100퍼 맞는지 체크
-        let checConfirm = confirm("할인율 100%를 입력하신게 맞나요?");
-        if (!checConfirm) {
-          return setDisV(0);
-        }
-      }
+      } 
+      // else if (disV == 100) {
+      //   //할인율 100퍼 맞는지 체크
+      //   let checConfirm = confirm("할인율 100%를 입력하신게 맞나요?");
+      //   if (!checConfirm) {
+      //     return setDisV(0);
+      //   }
+      // }
     } else if (!disV || disV == 0) {
       //할인율 없거나 0일 시
       let newOrPrice = Math.ceil(orPrice / 10) * 10;
