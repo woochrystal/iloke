@@ -1,5 +1,5 @@
 import axios from "axios";
-
+console.log('테스트:',process.env.REACT_APP_BACK_URL)
 const API = axios.create({
   baseURL: process.env.REACT_APP_BACK_URL + "/api", // 환경 변수 사용
 });
