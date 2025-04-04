@@ -132,7 +132,7 @@ function ProductsAddPage({ myData }) {
     }
   }, [option02, option01]);
 
-  console.log(selectedOption,'selectedOption')//체크 키워드값//선택한거 다 저장됨
+  // console.log(selectedOption,'selectedOption')//체크 키워드값//선택한거 다 저장됨
   // console.log(option01,'option01')//옵션리스트
   // console.log(option02,'selectedOption')//키워드값
   
