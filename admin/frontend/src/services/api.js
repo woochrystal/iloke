@@ -2,7 +2,8 @@ import axios from "axios";
 // console.log('테스트:',process.env.REACT_APP_BACK_URL)
 // console.log('테스트:',process.env)
 const API = axios.create({
-  baseURL: process.env.REACT_APP_BACK_URL + "/api", // 환경 변수 사용
+  // baseURL: process.env.REACT_APP_BACK_URL + "/api", // 환경 변수 사용
+  baseURL: process.env.JAWSDB_URL + "/api", // 환경 변수 사용
 });
 
 // CRUD 명칭 앞에 붙일 것
