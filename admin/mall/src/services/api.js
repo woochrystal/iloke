@@ -1,8 +1,8 @@
 import axios from 'axios';
 
 const API = axios.create({
-    // baseURL: process.env.REACT_APP_BACK_URL + '/mall', // 환경 변수 사용
-  baseURL: process.env.JAWSDB_URL + "/mall", // 환경 변수 사용
+    baseURL: process.env.REACT_APP_BACK_URL + '/mall', // 환경 변수 사용
+  // baseURL: process.env.JAWSDB_URL + "/mall", // 환경 변수 사용
 });
 
 // crud 명칭 앞에 붙일것
