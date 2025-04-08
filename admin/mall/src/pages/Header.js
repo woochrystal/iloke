@@ -31,6 +31,7 @@ function Header() {
     };
   }, []);
 
+  const env = process.env.REACT_APP_BACK_URL;
   const handleLogout = () => {
     sessionStorage.clear();
     setIsLoggedIn(false);
@@ -72,7 +73,7 @@ function Header() {
         <div className="gnb-wrap">
           <Link to="/" className="header-logo">
           {/* 이미지 경로 재설정해야함 */}
-          <img src={`http://localhost:5500/content/img/main/logo.png`} alt="ILOKE logo" />
+          <img src={`/content/img/main/logo.png`} alt="ILOKE logo" />
             {/* <img src="./content/img/main/logo.png" alt="ILOKE logo" /> */}
           </Link>
           <div className="gnb">
