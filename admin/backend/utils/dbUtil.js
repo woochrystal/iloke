@@ -28,7 +28,8 @@ process.on('SIGINT', () => {
 });
 
 // 커넥션 풀을 promise 방식으로 리턴
-module.exports = conn.promise();
+//mysql2/promise 써서 conn.promise() 할 필요 없음
+module.exports = conn;
 
 
 
