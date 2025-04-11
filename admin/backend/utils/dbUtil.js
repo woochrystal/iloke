@@ -1,17 +1,19 @@
 require('dotenv').config();
-const db = require('mysql2');
+const db = require('mysql2/promise');
+const { parse } = require('url');
+const dbUrl = process.env.DATABASE_URL;
+const parsedUrl = new URL(dbUrl);
 
 // 데이터베이스 연결 객체 생성
-const conn = db.createPool(process.env.DATABASE_URL);
-
-conn.query('show tables', function (err, results, fields) {
-    console.log(results) // results contains rows returned by server
-    console.log(fields) // fields contains extra metadata about results, if available
-})
-
-conn.query('select 1 from dual where ? = ?', [1, 1], function (err, results) {
-    console.log(results)
-})
+const conn = db.createPool({
+    host: parsedUrl.hostname,
+    user: parsedUrl.username,
+    password: parsedUrl.password,
+    database: parsedUrl.pathname.replace('/', ''),
+    ssl: {
+        rejectUnauthorized: true
+    }
+});
 
 // 서버 종료 시 DB 연결 종료
 process.on('SIGINT', () => {
