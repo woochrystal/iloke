@@ -2,85 +2,85 @@ const db = require('./dbUtil');
 
 async function createTable() {
     const sqlList = [
-    // {
-    //     name: '파일 관리 테이블',
-    //     sql: `
-    //         CREATE TABLE file_manage(
-    //             id VARCHAR(14) NOT NULL COMMENT '고유 id',
-    //             turn int(2) NOT NULL COMMENT '순서',
-    //             api_url VARCHAR(50) DEFAULT NULL COMMENT '요청 url',
-    //             org_name VARCHAR(100) NOT NULL COMMENT '원본 파일명',
-    //             new_name VARCHAR(255) NOT NULL COMMENT '변경 파일명',
-    //             ext VARCHAR(10) DEFAULT NULL COMMENT '확장자명',
-    //             path VARCHAR(255) DEFAULT NULL COMMENT '파일 저장 경로',
-    //             size BIGINT DEFAULT NULL COMMENT '파일 크기',
-    //             dsct TEXT DEFAULT NULL COMMENT '설명',
-    //             reg_id VARCHAR(60) NOT NULL COMMENT '등록자',
-    //             reg_date DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '등록 일시',
-    //             upt_id VARCHAR(60) DEFAULT NULL COMMENT '수정자',
-    //             upt_date DATETIME DEFAULT NULL COMMENT '수정 일시',
-    //             PRIMARY KEY (id, turn)
-    //         ) COMMENT = '파일 관리 테이블';
-    //     `
-    // },
-    // {
-    //     name: '답변 관리',
-    //     sql: `
-    //         CREATE TABLE answer (
-    //             id VARCHAR(14) NOT NULL COMMENT '고유id',
-    //             turn INT(3) NOT NULL DEFAULT 1 COMMENT '순번',      
-    //             comment text NOT NULL  COMMENT '답변',     
-    //             delete_yn TINYINT(1) NOT NULL DEFAULT '0' COMMENT '삭제여부',                 
-    //             reg_id VARCHAR(60) NOT NULL COMMENT '등록자',
-    //             reg_date DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '등록 일시',
-    //             upt_id VARCHAR(60) DEFAULT NULL COMMENT '수정자',
-    //             upt_date DATETIME DEFAULT NULL COMMENT '수정 일시',
-    //             PRIMARY KEY (id, turn)            
-    //         ) COMMENT = '답변 관리';
-    //     `
-    // },
-    // {
-    //     name: '회원 관리 테이블',
-    //     sql: `
-    //         CREATE TABLE mem_info ( 
-    //             id VARCHAR(50) PRIMARY KEY COMMENT '회원 아이디', 
-    //             pw VARCHAR(255) NOT NULL COMMENT '비밀번호', 
-    //             name VARCHAR(100) NOT NULL COMMENT '회원명', 
-    //             nick VARCHAR(50) COMMENT '닉네임', 
-    //             birth_date DATE COMMENT '생년월일', 
-    //             phone_num VARCHAR(20) COMMENT '휴대전화', 
-    //             email VARCHAR(100) COMMENT '이메일', 
-    //             addr VARCHAR(255) COMMENT '주소', 
-    //             role ENUM('관리자', '회원', '비회원', '탈퇴회원') DEFAULT '회원' COMMENT '접근 권한',  -- DEFAULT 값 수정
-    //             type ENUM('일반', '블랙리스트', '휴면계정') DEFAULT '일반'  COMMENT '회원 구분',-- DEFAULT 값 수정
-    //             level ENUM('브론즈', '실버', '골드', 'VIP') DEFAULT '브론즈' COMMENT '회원 등급', -- DEFAULT 값 수정
-    //             join_date DATETIME DEFAULT CURRENT_TIMESTAMP COMMENT '가입일시', 
-    //             last_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '최근접속일', 
-    //             m_remain INT DEFAULT 0 COMMENT '잔여 마일리지',
-    //             reg_id VARCHAR(60) NOT NULL COMMENT '작성자', 
-    //             reg_date DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '작성일시', 
-    //             upt_id VARCHAR(60) DEFAULT NULL COMMENT '수정자',
-    //             upt_date DATETIME DEFAULT NULL COMMENT '수정일시'
-    //         )   COMMENT = '회원 관리 테이블';
-    //     `
-    // },
-    // {
-    //     name: '마일리지 관리 테이블',
-    //     sql: `
-    //         CREATE TABLE mileage(
-    //             turn INT AUTO_INCREMENT PRIMARY KEY COMMENT '순서', 
-    //             id VARCHAR(50) NOT NULL COMMENT '회원 아이디', 
-    //             earn_date DATETIME DEFAULT CURRENT_TIMESTAMP COMMENT '적립 날짜', 
-    //             description TEXT COMMENT '적립 내용', 
-    //             valid_date DATE COMMENT '유효 날짜', 
-    //             change_val INT NOT NULL COMMENT '변동 내역',
-    //             reg_id VARCHAR(60) COMMENT '작성자',
-    //             reg_date DATETIME DEFAULT CURRENT_TIMESTAMP COMMENT '작성 일시', 
-    //             upt_id VARCHAR(60) COMMENT '수정자', 
-    //             upt_date DATETIME DEFAULT NULL COMMENT '수정 일시'
-    //         )   COMMENT = '마일리지 관리 테이블';
-    //     `
-    // },
+    {
+        name: '파일 관리 테이블',
+        sql: `
+            CREATE TABLE file_manage(
+                id VARCHAR(14) NOT NULL COMMENT '고유 id',
+                turn int(2) NOT NULL COMMENT '순서',
+                api_url VARCHAR(50) DEFAULT NULL COMMENT '요청 url',
+                org_name VARCHAR(100) NOT NULL COMMENT '원본 파일명',
+                new_name VARCHAR(255) NOT NULL COMMENT '변경 파일명',
+                ext VARCHAR(10) DEFAULT NULL COMMENT '확장자명',
+                path VARCHAR(255) DEFAULT NULL COMMENT '파일 저장 경로',
+                size BIGINT DEFAULT NULL COMMENT '파일 크기',
+                dsct TEXT DEFAULT NULL COMMENT '설명',
+                reg_id VARCHAR(60) NOT NULL COMMENT '등록자',
+                reg_date DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '등록 일시',
+                upt_id VARCHAR(60) DEFAULT NULL COMMENT '수정자',
+                upt_date DATETIME DEFAULT NULL COMMENT '수정 일시',
+                PRIMARY KEY (id, turn)
+            ) COMMENT = '파일 관리 테이블';
+        `
+    },
+    {
+        name: '답변 관리',
+        sql: `
+            CREATE TABLE answer (
+                id VARCHAR(14) NOT NULL COMMENT '고유id',
+                turn INT(3) NOT NULL DEFAULT 1 COMMENT '순번',      
+                comment text NOT NULL  COMMENT '답변',     
+                delete_yn TINYINT(1) NOT NULL DEFAULT '0' COMMENT '삭제여부',                 
+                reg_id VARCHAR(60) NOT NULL COMMENT '등록자',
+                reg_date DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '등록 일시',
+                upt_id VARCHAR(60) DEFAULT NULL COMMENT '수정자',
+                upt_date DATETIME DEFAULT NULL COMMENT '수정 일시',
+                PRIMARY KEY (id, turn)            
+            ) COMMENT = '답변 관리';
+        `
+    },
+    {
+        name: '회원 관리 테이블',
+        sql: `
+            CREATE TABLE mem_info ( 
+                id VARCHAR(50) PRIMARY KEY COMMENT '회원 아이디', 
+                pw VARCHAR(255) NOT NULL COMMENT '비밀번호', 
+                name VARCHAR(100) NOT NULL COMMENT '회원명', 
+                nick VARCHAR(50) COMMENT '닉네임', 
+                birth_date DATE COMMENT '생년월일', 
+                phone_num VARCHAR(20) COMMENT '휴대전화', 
+                email VARCHAR(100) COMMENT '이메일', 
+                addr VARCHAR(255) COMMENT '주소', 
+                role ENUM('관리자', '회원', '비회원', '탈퇴회원') DEFAULT '회원' COMMENT '접근 권한',  -- DEFAULT 값 수정
+                type ENUM('일반', '블랙리스트', '휴면계정') DEFAULT '일반'  COMMENT '회원 구분',-- DEFAULT 값 수정
+                level ENUM('브론즈', '실버', '골드', 'VIP') DEFAULT '브론즈' COMMENT '회원 등급', -- DEFAULT 값 수정
+                join_date DATETIME DEFAULT CURRENT_TIMESTAMP COMMENT '가입일시', 
+                last_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '최근접속일', 
+                m_remain INT DEFAULT 0 COMMENT '잔여 마일리지',
+                reg_id VARCHAR(60) NOT NULL COMMENT '작성자', 
+                reg_date DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '작성일시', 
+                upt_id VARCHAR(60) DEFAULT NULL COMMENT '수정자',
+                upt_date DATETIME DEFAULT NULL COMMENT '수정일시'
+            )   COMMENT = '회원 관리 테이블';
+        `
+    },
+    {
+        name: '마일리지 관리 테이블',
+        sql: `
+            CREATE TABLE mileage(
+                turn INT AUTO_INCREMENT PRIMARY KEY COMMENT '순서', 
+                id VARCHAR(50) NOT NULL COMMENT '회원 아이디', 
+                earn_date DATETIME DEFAULT CURRENT_TIMESTAMP COMMENT '적립 날짜', 
+                description TEXT COMMENT '적립 내용', 
+                valid_date DATE COMMENT '유효 날짜', 
+                change_val INT NOT NULL COMMENT '변동 내역',
+                reg_id VARCHAR(60) COMMENT '작성자',
+                reg_date DATETIME DEFAULT CURRENT_TIMESTAMP COMMENT '작성 일시', 
+                upt_id VARCHAR(60) COMMENT '수정자', 
+                upt_date DATETIME DEFAULT NULL COMMENT '수정 일시'
+            )   COMMENT = '마일리지 관리 테이블';
+        `
+    },
     {
         name: '주문 테이블',
         sql: `
