@@ -3,7 +3,7 @@ import MainPage from './pages/MainPage';
 
 function App() {
     return (
-        <Router basename="/iloke/mall">
+        <Router>
             <Routes>
                 {/* / 경로로 HomePage 렌더링 */}
                 {/* <Route path="/" element={<MainPage />} /> */}
