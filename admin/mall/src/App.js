@@ -1,9 +1,9 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import MainPage from './pages/MainPage';
 
 function App() {
     return (
-        <Router>
+        <Router basename="/iloke/mall">
             <Routes>
                 {/* / 경로로 HomePage 렌더링 */}
                 {/* <Route path="/" element={<MainPage />} /> */}

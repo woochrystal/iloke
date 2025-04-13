@@ -1,14 +1,13 @@
 import {
-  BrowserRouter as Router,
+  HashRouter as Router,
   Routes,
   Route,
-  BrowserRouter,
 } from "react-router-dom";
 import HomePage from "./pages/HomePage"; // HomePage 임포트
 
 function App() {
   return (
-    <Router>
+    <Router basename="/iloke/frontend">
       <Routes>
         {/* / 경로로 HomePage 렌더링 */}
         <Route path="/" element={<HomePage />} />
