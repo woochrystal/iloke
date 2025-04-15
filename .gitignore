@@ -1,7 +1,32 @@
-admin/mall/src/pages/goods/GoodsDetail copy.js
-admin/mall/src/pages/goods/GoodsDetail(옵션클릭기능o)).js
-admin/mall/src/pages/goods/GoodsDetail원본백업.js
-mode_module/
+mall/src/pages/goods/GoodsDetail copy.js
+mall/src/pages/goods/GoodsDetail(옵션클릭기능o)).js
+mall/src/pages/goods/GoodsDetail원본백업.js
+node_module/
 /node_modules/
 .vscode/
 /.vscode
+
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+
+# testing
+/coverage
+
+# production
+/build
+
+# misc
+.DS_Store
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
