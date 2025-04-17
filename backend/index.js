@@ -56,7 +56,9 @@ app.use(session({
 }));
 
 // 미들웨어 설정
-app.use(cors());
+app.use(cors({
+    origin: 'https://woochrystal.github.io'
+}));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
