@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import styles from './Button.module.css'; // CSS 파일은 필요에 따라 경로를 수정하세요
 
+const backendBaseURL = process.env.REACT_APP_BACK_URL;
 function Button() {
   const [colorOption, setColorOption] = useState("none");
   const [leatherOption, setLeatherOption] = useState("none");
@@ -52,7 +53,7 @@ function Button() {
   
       console.log("전송할 데이터", cartItems);
   
-      const response = await axios.post(`http://localhost:5000/mall/cart/${memberId}`, { cartItems });
+      const response = await axios.post(`${backendBaseURL}/mall/cart/${memberId}`, { cartItems });
       
       if (response.data.success) {
         alert('장바구니에 상품이 추가되었습니다.');

@@ -9,6 +9,7 @@ import { useParams } from 'react-router-dom'; // 추가
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Thumbs, FreeMode } from 'swiper/modules';
 
+const backendBaseURL = process.env.REACT_APP_BACK_URL;
 
 
 function GoodsDetail({id}) {
@@ -237,7 +238,7 @@ function GoodsDetail({id}) {
   
     //   console.log("전송할 데이터", cartItems);
   
-      const response = await axios.post(`http://localhost:5000/mall/cart/${memberId}`, { cartItems });
+      const response = await axios.post(`${backendBaseURL}/mall/cart/${memberId}`, { cartItems });
       
       if (response.data.success) {
         alert('장바구니에 상품이 추가되었습니다.');
@@ -282,7 +283,7 @@ function GoodsDetail({id}) {
   
       console.log("전송할 데이터:", JSON.stringify(cartItems, null, 2));
   
-      const response = await axios.post(`http://localhost:5000/mall/cart/${memberId}`, { cartItems });
+      const response = await axios.post(`${backendBaseURL}/mall/cart/${memberId}`, { cartItems });
       
       if (response.data.success) {
         alert('결제가 진행됩니다.');

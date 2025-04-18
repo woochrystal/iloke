@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 
+const backendBaseURL = process.env.REACT_APP_BACK_URL;
 const MileagePage = () => {
   const [members, setMembers] = useState([]);
   const [orders, setOrders] = useState([]);
@@ -10,7 +11,7 @@ const MileagePage = () => {
   const fetchMembersAndOrders = async () => {
     setLoading(true);
     try {
-      const response = await axios.get("http://localhost:5000/api/mileage");
+      const response = await axios.get(`${backendBaseURL}/api/mileage`);
       setMembers(response.data.members || []);
       setOrders(response.data.orders || []);
     } catch (error) {
@@ -26,7 +27,7 @@ const MileagePage = () => {
     setLoading(true);
     try {
       const response = await axios.post(
-        "http://localhost:5000/api/mileage/confirm",
+        `${backendBaseURL}/api/mileage/confirm`,
         { order_id: orderId },
       );
       alert(response.data.message);
@@ -45,7 +46,7 @@ const MileagePage = () => {
     setLoading(true);
     try {
       const response = await axios.post(
-        "http://localhost:5000/api/mileage/cancel-confirmation",
+        `${backendBaseURL}/api/mileage/cancel-confirmation`,
         { order_id: orderId },
       );
       alert(response.data.message);

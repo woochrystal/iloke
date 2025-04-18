@@ -25,23 +25,6 @@ const promotions = [
 ];
 
 // import 필요한 부분
-{/* <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ILOKE</title>
-  <link rel="stylesheet" href="./css/reset.css" />
-  <link rel="stylesheet" href="./css/fonts.css" />
-  <link rel="stylesheet" href="./css/default.css" />
-  <link rel="stylesheet" href="./css/sub.css" />
-  <script src="./js/jquery-3.7.1.min.js"></script>
-  <script src="./js/default.js"></script>
-  <script src="./js/sub.js"></script>
-
-  <!-- fontawsome 6.6.0 (아이콘)-->
-  <!-- swiper  -->
-  <link rel="stylesheet" href="./content/swiper/swiper-bundle.min.css">
-  <script src="./content/swiper/swiper-bundle.min.js"></script>
-</head> */}
 
 function Home(props) {
     const scrollToTop = () => {

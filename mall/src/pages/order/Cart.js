@@ -1,9 +1,5 @@
 import React, { useState, useEffect } from "react";
 import styles from './Cart.module.css';
-//   import '../css/default.css';
-//   import '../css/fonts.css';
-//  import '../css/reset.css';
-// import '../css/sub.css';
 
 import { rFetchCartItems, dDeleteCartItem, uSubmitOrder } from '../../services/api';
 
