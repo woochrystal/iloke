@@ -20,7 +20,6 @@ const Cart = () => {
     if (!userId) {
       alert("로그인이 필요합니다. 로그인 페이지로 이동합니다.");
       navigate("/login");
-      return null; // 로그인되지 않은 경우 아무것도 렌더링하지 않음
     }
 
     const fetchCartItems = async () => {
