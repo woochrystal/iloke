@@ -9,7 +9,7 @@ $(function () {
       // 로그인 상태 처리
     } else {
       // 로그인 아닌 상태 처리
-      loadContent("/member/login.html");
+      loadContent("./sub/member/login.html");
     }
   });
 
@@ -22,7 +22,7 @@ $(function () {
       $("#join").css("display","block");
       $(".head-login").css("display","none");
     } else {
-      loadContent("/member/login.html");
+      loadContent("./sub/member/login.html");
     }
   });
 });

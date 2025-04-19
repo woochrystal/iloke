@@ -6,7 +6,7 @@ import '../css/reset.css';
 import '../css/fonts.css';
 import '../css/default.css';
 import '../js/default.js';
-import '../js/sub.js';
+// import '../js/sub.js';
 import 'swiper/css';
 import 'swiper/css/thumbs';
 import 'swiper/css/free-mode';
@@ -166,9 +166,15 @@ function Header() {
                 </Link>
               </li>
               <li>
-                <Link to="/goods/myPage" className="nav-user">
-                  <i className="fa-solid fa-user-large"></i>
-                </Link>
+                {isLoggedIn ? (
+                  <Link to="/goods/myPage" className="nav-user">
+                    <i className="fa-solid fa-user-large"></i>
+                  </Link>
+                ) : (
+                  <Link to="/login" id="loginYn">
+                    로그인
+                  </Link>
+                )}
               </li>
               <li>
                 <a href="#" className="mbl_btn">
