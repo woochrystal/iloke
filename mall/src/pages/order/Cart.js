@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+
 import styles from './Cart.module.css';
 
 import { rFetchCartItems, dDeleteCartItem, uSubmitOrder } from '../../services/api';
@@ -8,21 +10,20 @@ import Footer from "../Footer";
 
 const Cart = () => {
   const userId = sessionStorage.getItem('userId');
-
-  // 로그인 상태 확인 후 리다이렉션 처리
-  if (!userId) {
-    alert("로그인이 필요합니다. 로그인 페이지로 이동합니다.");
-    window.location.href = '/login';
-    return null; // 로그인되지 않은 경우 아무것도 렌더링하지 않음
-  }
-
+  const navigate = useNavigate();
   const [cartItems, setCartItems] = useState([]);
   const [totalPrice, setTotalPrice] = useState(0);
   const [isAllChecked, setIsAllChecked] = useState(true);
-
-  useEffect(() => {
-    const fetchCartItems = async () => {
   
+  useEffect(() => {
+    // 로그인 상태 확인 후 리다이렉션 처리
+    if (!userId) {
+      alert("로그인이 필요합니다. 로그인 페이지로 이동합니다.");
+      navigate("/login");
+      return null; // 로그인되지 않은 경우 아무것도 렌더링하지 않음
+    }
+
+    const fetchCartItems = async () => {
       try {
         const response = await rFetchCartItems(userId);
         if (response.status !== 200) throw new Error("HTTP 상태 코드: " + response.status);

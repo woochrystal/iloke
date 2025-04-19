@@ -172,7 +172,7 @@ function Header() {
                   </Link>
                 ) : (
                   <Link to="/login" id="loginYn">
-                    로그인
+                    <i className="fa-solid fa-user-large"></i>
                   </Link>
                 )}
               </li>
