@@ -24,6 +24,11 @@ const MyPageRoutes = require('./routes/order/MyPage') // 프론트 페이지
 
 const app = express();
 
+// 미들웨어 설정
+app.use(cors({
+    origin: 'https://woochrystal.github.io'
+}));
+app.options('*', cors());//OPTIONS 메서드에 대한 응답을 보내기 위함
 // 바디파서
 app.use(express.json());
 
@@ -55,10 +60,6 @@ app.use(session({
   cookie: { secure: false, httpOnly : false, }
 }));
 
-// 미들웨어 설정
-app.use(cors({
-    origin: 'https://woochrystal.github.io'
-}));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
