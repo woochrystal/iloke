@@ -15,6 +15,12 @@
 
 ***
 
+### 관련 링크
+- [이로케 최종 PPT]<https://woochrystal.github.io/file/iloke.pdf>
+- [이로케 GitHub]<https://github.com/woochrystal/iloke>
+ 
+***
+
 ### ⚙개발환경
 `JavaScript`, `React`, `HTML`, `CSS`, `SCSS`, `jQuery`, `Node.js`, `MariaDB`
 
@@ -35,3 +41,14 @@
 - `Axios`와 `Express`를 사용하여 관리자 페이지(Port 3000)에서 백엔드에 등록한 데이터를 사용자 화면(Port 5500)으로 가져올 수 있게 했습니다.
 - 선택한 옵션에 추가 금액이 등록되어 있다면 할인율이 반영된 가격에 옵션 금액을 추가하여 최종 가격을 보여줍니다.
 - 선택한 상품들의 정보와 최종 주문 가격 데이터를 다른 팀원이 담당한 장바구니 페이지로 문제없이 전달할 수 있도록 작업했습니다.
+
+***
+
+### ⚠문제 해결
+#### 깃허브 페이지에 리액트 앱 호스팅<br>빌드파일을 올렸지만 화면이 하얗게 나오는 문제
+- `404 error docs` 바로 안에 `.nojekyll`파일 생성
+- 절대경로로 시작하는 파일 경로를 `${process.env.PUBLIC_URL}`를 사용하여 자동으로 `public`폴더 위치를 잡게 수정했습니다.
+
+### `after`요소에 적용된 FontAwsome 폰트<br>직접 `i`로 불려온 FontAwsome은 보이지만 font로 적용시키면 오류
+- all.min.css 파일 기준으로 상위 폴더에 webfonts가 있어야 자동으로 font-family 적용 된다는것 확인
+
