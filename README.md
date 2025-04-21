@@ -16,8 +16,8 @@
 ***
 
 ### 관련 링크
-- [이로케 최종 PPT]<https://woochrystal.github.io/file/iloke.pdf>
-- [이로케 GitHub]<https://github.com/woochrystal/iloke>
+- [이로케 최종 PPT](https://woochrystal.github.io/file/iloke.pdf)
+- [이로케 GitHub](https://github.com/woochrystal/iloke)
  
 ***
 
