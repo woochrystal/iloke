@@ -25,10 +25,12 @@ const MyPageRoutes = require('./routes/order/MyPage') // 프론트 페이지
 const app = express();
 
 // 미들웨어 설정
-app.use(cors({
-    origin: 'https://woochrystal.github.io'
-}));
-app.options('*', cors());//OPTIONS 메서드에 대한 응답을 보내기 위함
+const corsOptions = {
+    origin: ['http://localhost:3000', 'http://localhost:5500', 'https://woochrystal.github.io'],
+    credentials: true
+  };
+app.use(cors(corsOptions));
+app.options('*', cors(corsOptions));//OPTIONS 메서드에 대한 응답을 보내기 위함
 // 바디파서
 app.use(express.json());
 
