@@ -27,6 +27,8 @@ const app = express();
 // 미들웨어 설정
 const corsOptions = {
     origin: ['http://localhost:3000', 'http://localhost:5500', 'https://woochrystal.github.io'],
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+    allowedHeaders: ['Content-Type', 'Authorization'],
     credentials: true
   };
 app.use(cors(corsOptions));
