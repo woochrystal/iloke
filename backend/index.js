@@ -28,7 +28,8 @@ const app = express();
 const corsOptions = {
     origin: ['http://localhost:3000', 'http://localhost:5500', 'https://woochrystal.github.io'],
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
-    allowedHeaders: ['Content-Type', 'Authorization']
+    allowedHeaders: ['Content-Type', 'Authorization'],
+    credentials: true
   };
 app.use(cors(corsOptions));
 app.options('*', cors(corsOptions));//OPTIONS 메서드에 대한 응답을 보내기 위함
