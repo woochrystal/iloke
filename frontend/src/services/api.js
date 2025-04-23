@@ -94,6 +94,7 @@ export const modifyMem = (myData) => API.put("/member/modify", myData);
 
 // 관리자 로그인
 export const loginAdmin = (userData) => {
+  console.log("로그인 요청 중:", userData);  // 로그 찍기
   return API.post("/login", userData); // POST 요청
 };
 
