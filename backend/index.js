@@ -5,7 +5,7 @@ const path =  require('path');
 const upload = require("./utils/uploadUtil_bak")
 const session = require('express-session');
 const conn = require('./utils/dbUtil')
-console.log('🔥 서버 시작 준비 중...');
+// console.log('🔥 서버 시작 준비 중...');
 
 const imageLoadController = require('./routes/imageLoadController');
 const boardRoutes = require('./routes/boardRoutes');
