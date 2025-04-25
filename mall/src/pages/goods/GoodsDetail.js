@@ -195,7 +195,7 @@ function GoodsDetail({id}) {
   
       if (!memberId) {
         alert('로그인이 필요합니다.');
-        window.location.href = '/login';
+        window.location.href = '#/login';
         return;
       }
   
@@ -466,7 +466,7 @@ let optionLabels = optionValCalMapped;
                                     <SwiperSlide
                                         className={styles.swiper_slide}
                                         key={index}>
-                                            <img src={`../../content/img/sample/${image}`} />
+                                            <img src={`${process.env.PUBLIC_URL}/content/img/sample/${image}`} />
                                     </SwiperSlide>
                                 ))}
                         </Swiper>
@@ -494,7 +494,7 @@ let optionLabels = optionValCalMapped;
                                             {({ isActive }) => (
                                                 <div>Current slide is {isActive ? 'active' : 'not active'}</div>
                                             )}
-                                            <img src={`../../content/img/sample/${image}`} />
+                                            <img src={`${process.env.PUBLIC_URL}/content/img/sample/${image}`} />
                                     </SwiperSlide>
                                 ))}
                         </Swiper>
@@ -657,7 +657,7 @@ let optionLabels = optionValCalMapped;
                         </div>
                         <div className={styles.goods_section_image}>
                             <div className={styles.goods_section_explain}>
-                                <img src="../../content/img/sample/info1_caution.jpg" alt="상품 배송 설명" />
+                                <img src={`${process.env.PUBLIC_URL}/content/img/sample/info1_caution.jpg`} alt="상품 배송 설명" />
                             </div>
                         </div>
                     </section>
