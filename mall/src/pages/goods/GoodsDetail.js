@@ -491,9 +491,10 @@ let optionLabels = optionValCalMapped;
                                     <SwiperSlide 
                                     className={`${styles.mySwiper2_list} ${styles.swiper_slide}`}
                                         key={index}>
-                                            {({ isActive }) => (
+                                            {/* {({ isActive }) => (
                                                 <div>Current slide is {isActive ? 'active' : 'not active'}</div>
-                                            )}
+                                            )} */}
+                                            {/* 이걸 왜넣어놓으셨지? */}
                                             <img src={`${process.env.PUBLIC_URL}/content/img/sample/${image}`} />
                                     </SwiperSlide>
                                 ))}
@@ -553,7 +554,7 @@ let optionLabels = optionValCalMapped;
                                     <div className={styles.product_options}>{/* 옵션 */}
                                         {
                                             optionMain.map((st, i) => {//옵션 메인코드 
-                                                console.log('Rendering optionMain:', st);
+                                                // console.log('Rendering optionMain:', st);
                                                 const opNameIdx = optionTit[i]//옵션명
                                                 const optionValues = opValArr[st] || [];//이걸 나눠야해
                                                 const optionPrices = optionData[opNameIdx] || [];//옵션금액
@@ -591,7 +592,7 @@ let optionLabels = optionValCalMapped;
                                             })
                                         }
                                     
-                                    <button onClick={handleOptionSelect}>옵션 추가</button>
+                                    <button onClick={handleOptionSelect}>옵션 선택</button>
                                 </div>
                                     
                                     ):''}
@@ -614,7 +615,7 @@ let optionLabels = optionValCalMapped;
                                                     </>
                                                 ) : (
                                                     <>
-                                                        <button onClick={() => removeOption(option.key)}>삭제</button>
+                                                        <button onClick={() => removeOption(option.key)}>-</button>
                                                         <span>{option.quantity}</span>
                                                         <button onClick={() => increaseQuantity(option.key)}>+</button>
                                                     </>

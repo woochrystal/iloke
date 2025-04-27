@@ -64,6 +64,7 @@
 
 .main_content {
     .product_section {
+        button{margin: 0;}
         width: 100%;
         display: flex;
         justify-content: space-between;
@@ -234,7 +235,15 @@
             .product_options {
                 width: 100%;
                 margin: 20px 0;
-
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: flex-end;
+                select{
+                    margin-bottom: 5px;
+                }
+                button{
+                    margin-top: 15px;
+                }
                 .color_select, 
                 .leather_select, 
                 .stool_select{//부모요소 셀렉트
@@ -284,9 +293,9 @@
 .option_wrap {
     width: 100%;
     .option_bg {
-        border-top: 1px solid #ccc;
-        border-bottom: 1px solid #ccc;
-        padding: 30px 20px;
+        background: #f0f0f0;
+        margin: 20px 0;
+        padding: 5px 20px;
     }
     .option_bg:nth-child(1),
     .option_bg:nth-child(2) {
@@ -330,6 +339,25 @@
         .option_quantity {
             display: flex;
             justify-content: space-between;
+            align-items: stretch;
+            button{//상품 삭제, +-버튼
+                width: 50px;
+                background: #fff;
+                height: auto;
+                padding: 10px 20px;
+                font-size: 1.3rem;
+            }
+            span{
+                background: #fff;
+                display: flex;
+                padding: 10px 15px;
+                justify-content: center;
+                align-items: center;
+                border: 2px solid #ccc;
+                border-top: 0;
+                border-bottom: 0;
+                min-width: 100px;
+            }
         }
         .option_quantity{
             .option_minus,
@@ -430,6 +458,7 @@
         cursor: pointer;
     }:hover {
         background-color: #005D75;
+        color: #fff;
     }
 }//product_choice
 
@@ -1431,40 +1460,42 @@
 }
 
 @media screen and (max-width:800px){
-    .main_content .review_section .review_info {
-        flex-wrap: wrap;
-    }
-
-    .main_content .review_section .review_info .review_info_box .review_info_list {
-        display: none;
-    }
-    
-    .main_content .review_section .review_info .review_info_box {
-        width: 40%;
-    }
-
-    .main_content .review_section .review_info .review_gather {
-        height: auto;
-    }
-    
-    .main_content .review_section .review_info .review_photo_review {
-        width: 59%;
-        border-right: 0;
-    }
-    
-    .main_content .product_section {
+    .main_content .review_section {
         flex-direction: column;
-    }
 
-    .main_content .product_section .product_image_wrapper {
-        width: 100%;
-        position: static;
-    }
+        .review_info {
+            flex-wrap: wrap;
 
-    .main_content .product_section .product {
-        width: 100%;
-        position: static;
-        margin-top: 20px;
+            .review_info_box {
+                width: 40%;
+                .review_info_list {
+                    display: none;
+                }
+            }
+            .review_gather {
+                height: auto;
+            }
+            .review_photo_review {
+                width: 59%;
+                border-right: 0;
+            }
+
+        }
+        .product_image_wrapper {
+            width: 100%;
+            position: static;
+        }
+        .product {
+            width: 100%;
+            position: static;
+            margin-top: 20px;
+            
+            button{
+                width: 100%;
+            }
+        }
+
+
     }
 
     .main_content .product_section .product .product_options .color_select dt,

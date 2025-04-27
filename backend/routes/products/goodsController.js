@@ -3,7 +3,7 @@ const router = express.Router();
 const conn = require('../../utils/dbUtil')
 
     router.get('/',async (req,res)=>{
-        console.log('쇼핑몰 상품리스트 요청')
+        // console.log('쇼핑몰 상품리스트 요청')
         try {
             const [ret] = await conn.execute(`
                 select 
@@ -22,7 +22,7 @@ const conn = require('../../utils/dbUtil')
     })
 
     router.get(`/goodsDetail/:id`,async (req,res)=>{
-            console.log('쇼핑몰 디테일 접근')
+            // console.log('쇼핑몰 디테일 접근')
             try {
                 const [ret] = await conn.execute(
                     `SELECT 
