@@ -25,7 +25,7 @@ const MemDelete = () => {
       if (response.data.success) {
         alert('회원탈퇴가 완료되었습니다.');
         sessionStorage.clear(); // 세션 초기화
-        window.location.href = '/';
+        window.location.href = '#/';
         //navigate('/'); // 탈퇴 후 메인 페이지로 이동
       } else {
         setErrorMessage(response.data.message || '비밀번호가 일치하지 않습니다.');

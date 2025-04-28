@@ -287,7 +287,7 @@ function GoodsDetail({id}) {
       
       if (response.data.success) {
         alert('결제가 진행됩니다.');
-        window.location.href = '/order';
+        window.location.href = '#/order';
       } else {
         alert('결제가 실패했습니다.');
       }
@@ -378,8 +378,8 @@ let optionLabels = optionValCalMapped;
 
 
     if (isDuplicate) {
-    alert("이미 선택된 옵션입니다.");
-    return;
+        alert("이미 선택된 옵션입니다.");
+        return;
     }
     setOptionList([...optionList, {
         key: optionKey,
@@ -391,16 +391,10 @@ let optionLabels = optionValCalMapped;
         price: finalPrice,
         quantity: 1
     }]);
-
-
-
-    
     // 옵션 상태 초기화
     setColorOption("none");
     setLeatherOption("none");
     setStoolOption("none");
-
-
 
 };
 

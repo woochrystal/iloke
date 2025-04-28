@@ -142,7 +142,7 @@ const OrderEnd = ({ orderId }) => { //  orderId를 props로 받음
         <button
           type="button"
           className="complete_btn"
-          onClick={() => (window.location.href = "/")}
+          onClick={() => (window.location.href = "#/")}
         >
           확인
         </button>

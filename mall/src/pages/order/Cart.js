@@ -120,7 +120,7 @@ const Cart = () => {
       const userId = sessionStorage.getItem('userId');
       if (!userId) {
         alert("로그인이 필요합니다.");
-        window.location.href = '/login';
+        window.location.href = '#/login';
         return;
       }
   
@@ -147,7 +147,7 @@ const Cart = () => {
       sessionStorage.setItem('orderData', JSON.stringify(orderData)); 
   
       //  Order 페이지로 이동
-      window.location.href = '/order'; 
+      window.location.href = '#/order'; 
     } catch (error) {
       console.error(' 주문 데이터 처리 중 오류 발생:', error);
       alert('주문 처리 중 오류가 발생했습니다.');
@@ -280,7 +280,7 @@ const Cart = () => {
           <button
             type="button"
             id="product_btn"
-            onClick={() =>  window.location.href = '/goods/goodsList'}
+            onClick={() =>  window.location.href = '#/goods/goodsList'}
           >
             쇼핑 계속하기
           </button>

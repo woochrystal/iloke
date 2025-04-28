@@ -45,7 +45,7 @@ const [isLoading, setIsLoading] = useState(true); // 로딩 상태 추가
 useEffect(() => {
   if (!memberId) {
     alert('로그인 정보가 없습니다. 다시 로그인 해주세요.');
-    window.location.href = '/login';
+    window.location.href = '#/login';
   } else {
     setIsLoading(false);
   }
@@ -368,14 +368,14 @@ if (isLoading) {
                 <li className="mypage-top-balance">
                 <button 
                     className="memmodiButton" 
-                    onClick={() => window.location.href = '/memModify1'}
+                    onClick={() => window.location.href = '#/memModify1'}
                   >
                     회원정보수정
                   </button>
 
                   <button 
                     className="memdelButton" 
-                    onClick={() => window.location.href = '/memDelete'}
+                    onClick={() => window.location.href = '#/memDelete'}
                   >
                     회원탈퇴
                   </button>
@@ -568,7 +568,7 @@ if (isLoading) {
   <>
     <button 
       className="action-button" 
-      onClick={() => window.location.href = '/notice/customer_review'} //  클릭 시 이동
+      onClick={() => window.location.href = '#/notice/customer_review'} //  클릭 시 이동
     >
       후기등록
     </button>

@@ -167,7 +167,7 @@ useEffect(() => {
       if (data.success) {
         alert(`결제가 완료되었습니다.`);
       
-        window.location.href = `/orderend/${data.orderId}`; //  URL에 orderId 포함
+        window.location.href = `#/orderend/${data.orderId}`; //  URL에 orderId 포함
       } else {
         alert('결제 처리 중 오류가 발생했습니다.');
       }
@@ -282,7 +282,7 @@ useEffect(() => {
           type="button" 
           className={styles.cart_button} 
           id="cart_btn" 
-          onClick={() => window.location.href = './cart'}
+          onClick={() => window.location.href = '#/cart'}
         >
           장바구니 가기
         </button>
