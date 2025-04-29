@@ -219,7 +219,7 @@ function GoodsDetail({id}) {
       }));
 
 // 업데이트된 optionList 확인
-// console.log("Updated optionList:", optionList);
+console.log("Updated optionList:", optionList);
 
 
 
@@ -236,7 +236,7 @@ function GoodsDetail({id}) {
         }
       }));
   
-    //   console.log("전송할 데이터", cartItems);
+      console.log("전송할 데이터", cartItems);
   
       const response = await axios.post(`${backendBaseURL}/mall/cart/${memberId}`, { cartItems });
       

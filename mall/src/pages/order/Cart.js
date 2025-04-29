@@ -27,7 +27,8 @@ const Cart = () => {
         const response = await rFetchCartItems(userId);
         if (response.status !== 200) throw new Error("HTTP 상태 코드: " + response.status);
         const data = response.data;
-        // console.log("백 다녀옴",data);
+        console.log("백 다녀옴",data);
+        console.log("response",response);
         
         if (!data || !data.cartItems) throw new Error("cartItems가 비어있습니다.");
   
@@ -176,7 +177,8 @@ const Cart = () => {
         </ol>
       </div>
   
-      {cartItems.length > 0 ? (
+      {cartItems.length > 0 ? 
+      (
         <div className={styles.table_div}>
           <table>
             <tbody>
@@ -198,8 +200,6 @@ const Cart = () => {
               </tr>
   
               {cartItems.map((item) => (
-
-                
                 <tr key={item.cart_id}>
                   <td>
                     <input 
@@ -209,37 +209,36 @@ const Cart = () => {
                     />
                   </td>
                   <td className={styles.name_td}>
-                  <img 
-  src={`/content/img/main/main_product${String(item.product_id).padStart(2, '0')}.jpg`} 
-  alt={item.product_name} 
-  style={{ width: "40px", height: "32px" }} 
-/>
+                    <img 
+                      src={`/content/img/main/main_product${String(item.product_id).padStart(2, '0')}.jpg`} 
+                      alt={item.product_name} 
+                      style={{ width: "40px", height: "32px" }} 
+                    />
                     {item.product_name}
 
-                   {/*  옵션 추가 부분 */}
-{item.options && (
-  <div className={styles.option_info}>
-    {(() => {
-      try {
-        // 옵션 데이터 확인 및 파싱
-        const parsedOptions = typeof item.options === 'string'
-          ? JSON.parse(item.options) // JSON 문자열일 경우 파싱
-          : item.options; // 이미 객체인 경우 그대로 사용
+                    {/*  옵션 추가 부분 */}
+                    {item.options && (
+                      <div className={styles.option_info}>
+                        {(() => {
+                          try {
+                            // 옵션 데이터 확인 및 파싱
+                            const parsedOptions = typeof item.options === 'string'
+                              ? JSON.parse(item.options) // JSON 문자열일 경우 파싱
+                              : item.options; // 이미 객체인 경우 그대로 사용
 
-        // 옵션 값만 보기 좋은 형식으로 변환
-        if (parsedOptions && typeof parsedOptions === 'object') {
-          return Object.values(parsedOptions).join(' / '); // 값만 추출해서 표시
-        } else {
-          return "옵션 데이터가 없습니다.";
-        }
-      } catch (error) {
-        console.error("옵션 처리 오류:", error);
-        return "옵션 데이터를 표시할 수 없습니다.";
-      }
-    })()}
-  </div>
-)}
-        {/*  */}
+                            // 옵션 값만 보기 좋은 형식으로 변환
+                            if (parsedOptions && typeof parsedOptions === 'object') {
+                              return Object.values(parsedOptions).join(' / '); // 값만 추출해서 표시
+                            } else {
+                              return "옵션 데이터가 없습니다.";
+                            }
+                          } catch (error) {
+                            console.error("옵션 처리 오류:", error);
+                            return "옵션 데이터를 표시할 수 없습니다.";
+                          }
+                        })()}
+                      </div>
+                    )}
                   </td>
                   <td>{item.quantity}개</td>
                   <td>{item.final_price.toLocaleString()}원</td>

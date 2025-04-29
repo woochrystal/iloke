@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/iloke/mall/static/css/main.a19412d0.css",
-    "main.js": "/iloke/mall/static/js/main.ea3c681c.js",
+    "main.js": "/iloke/mall/static/js/main.0ef13338.js",
     "static/js/453.f01195fd.chunk.js": "/iloke/mall/static/js/453.f01195fd.chunk.js",
     "static/media/NotoSansKR-Black.otf": "/iloke/mall/static/media/NotoSansKR-Black.65bf9d1c7fe0c74765b7.otf",
     "static/media/NotoSansKR-Bold.otf": "/iloke/mall/static/media/NotoSansKR-Bold.d70da461aee08ea5e329.otf",
@@ -39,11 +39,11 @@
     "static/media/Roboto-Thin.ttf": "/iloke/mall/static/media/Roboto-Thin.7cc2944f187ea510b4c7.ttf",
     "index.html": "/iloke/mall/index.html",
     "main.a19412d0.css.map": "/iloke/mall/static/css/main.a19412d0.css.map",
-    "main.ea3c681c.js.map": "/iloke/mall/static/js/main.ea3c681c.js.map",
+    "main.0ef13338.js.map": "/iloke/mall/static/js/main.0ef13338.js.map",
     "453.f01195fd.chunk.js.map": "/iloke/mall/static/js/453.f01195fd.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.a19412d0.css",
-    "static/js/main.ea3c681c.js"
+    "static/js/main.0ef13338.js"
   ]
 }
