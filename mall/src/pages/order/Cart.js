@@ -210,7 +210,7 @@ const Cart = () => {
                   </td>
                   <td className={styles.name_td}>
                     <img 
-                      src={`/content/img/main/main_product${String(item.product_id).padStart(2, '0')}.jpg`} 
+                      src={`${process.env.PUBLIC_URL}/content/img/main/main_product${String(item.product_id).padStart(2, '0')}.jpg`} 
                       alt={item.product_name} 
                       style={{ width: "40px", height: "32px" }} 
                     />

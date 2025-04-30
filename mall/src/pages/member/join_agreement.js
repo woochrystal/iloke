@@ -331,7 +331,7 @@ function JoinAgreement(){
 
             {/* 버튼 영역 */}
             <div className={styles.buttonContainer}>
-                <button className={styles.btnPrev} onClick={() => navigate("/joinMethod")}>이전단계</button>
+                <button className={styles.btnPrev} onClick={() => navigate("#/joinMethod")}>이전단계</button>
                 <button className={styles.btnNext} onClick={handleNext}>다음단계</button>
             </div>
         

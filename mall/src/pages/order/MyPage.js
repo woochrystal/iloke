@@ -354,7 +354,7 @@ if (isLoading) {
               <ul className="mypage-top-wallet-wrap">
                 <li className="mypage-top-mileage">
                   <img
-                    src="/content/img/sample/icon_mileage.png"
+                    src={`${process.env.PUBLIC_URL}/content/img/sample/icon_mileage.png`}
                     className="coupon-mileage"
                     alt="마일리지 아이콘"
                   />

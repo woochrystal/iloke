@@ -42,13 +42,13 @@ function BenefitsSection() {
   
     return (
       <div className={styles.joinBaseWrap}>
-        <button className={styles.btnJoin} onClick={() => loadContent("/joinAgreement")}>
+        <button className={styles.btnJoin} onClick={() => loadContent("#/joinAgreement")}>
           쇼핑몰 회원가입
         </button>
         <br/>
         <p>
           이미 쇼핑몰 회원이세요?{" "}
-          <Link className={styles.underline} onClick={() => loadContent("/login")}>
+          <Link className={styles.underline} onClick={() => loadContent("#/login")}>
             로그인
           </Link>
         </p>
