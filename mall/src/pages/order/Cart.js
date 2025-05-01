@@ -29,6 +29,7 @@ const Cart = () => {
         const data = response.data;
         console.log("백 다녀옴",data);
         console.log("response",response);
+        console.log("userId",userId);
         
         if (!data || !data.cartItems) throw new Error("cartItems가 비어있습니다.");
   
