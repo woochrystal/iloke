@@ -60,9 +60,11 @@ function GoodsDetail({id}) {
 
      // 🔥 URL에서 상품 ID 가져오기
      useEffect(() => {
-        const path = window.location.pathname; // 현재 URL 경로
+        const path = window.location.hash; // # 이후 URL 경로 > 호스팅하고 url 구조 바뀜
+        const split = path.split('/'); // URL의 마지막 부분 추출
         const id = path.split('/').pop(); // URL의 마지막 부분 추출
         setProductId(id); // 상품 ID 설정
+        // console.log('split:', split);
         // console.log('상품 ID:', id);
     }, []);
 

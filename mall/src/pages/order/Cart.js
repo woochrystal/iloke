@@ -27,9 +27,9 @@ const Cart = () => {
         const response = await rFetchCartItems(userId);
         if (response.status !== 200) throw new Error("HTTP 상태 코드: " + response.status);
         const data = response.data;
-        console.log("백 다녀옴",data);
-        console.log("response",response);
-        console.log("userId",userId);
+        // console.log("백 다녀옴",data);
+        // console.log("response",response);
+        // console.log("userId",userId);
         
         if (!data || !data.cartItems) throw new Error("cartItems가 비어있습니다.");
   
@@ -37,18 +37,18 @@ const Cart = () => {
         setCartItems(data.cartItems.map((item) => ({ ...item, checked: true })));
   
         //  디버깅 코드 추가 
-        data.cartItems.forEach((item, index) => {
-          console.log(`📦 장바구니 아이템 ${index + 1} 데이터:`, item);
-          console.log(`🛠️ 옵션 데이터 JSON.stringify:`, JSON.stringify(item.options, null, 2)); // 방법 1
-          console.dir(item.options, { depth: null }); // 방법 2
-          if (item.options) {
-            item.options.forEach((option, idx) => {
-              console.log(`📝 옵션 ${idx + 1}:`, option); // 방법 3
-            });
-          } else {
-            console.log(' 옵션 데이터가 존재하지 않습니다.');
-          }
-        });
+        // data.cartItems.forEach((item, index) => {
+        //   console.log(`📦 장바구니 아이템 ${index + 1} 데이터:`, item);
+        //   console.log(`🛠️ 옵션 데이터 JSON.stringify:`, JSON.stringify(item.options, null, 2)); // 방법 1
+        //   console.dir(item.options, { depth: null }); // 방법 2
+        //   if (item.options) {
+        //     item.options.forEach((option, idx) => {
+        //       console.log(`📝 옵션 ${idx + 1}:`, option); // 방법 3
+        //     });
+        //   } else {
+        //     console.log(' 옵션 데이터가 존재하지 않습니다.');
+        //   }
+        // });//>이걸 왜넣어놨는지 모르겠음
         //  디버깅 코드 끝 
   
       } catch (error) {
@@ -243,7 +243,10 @@ const Cart = () => {
                   </td>
                   <td>{item.quantity}개</td>
                   <td>{item.final_price.toLocaleString()}원</td>
-                  <td>{item.discount}%<br />(-{(item.price * (item.discount / 100)).toLocaleString()}원)</td>
+                  <td>
+                    {item.discount}%
+                    {/* <br />(-{(item.price * (item.discount / 100)).toLocaleString()}원) */}
+                    </td>
                   <td>{(item.final_price * item.quantity).toLocaleString()}원</td>
                   <td>무료배송</td>
                 </tr>
