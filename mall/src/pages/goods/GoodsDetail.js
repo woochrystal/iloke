@@ -245,6 +245,7 @@ console.log("Updated optionList:", optionList);
       if (response.data.success) {
         alert('장바구니에 상품이 추가되었습니다.');
         window.location.href = '#/cart';
+        window.location.reload();//새로고침 추가
       } else {
         alert('장바구니 추가에 실패했습니다.');
       }

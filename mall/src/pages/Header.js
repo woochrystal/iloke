@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import { rFetchCartItems, dDeleteCartItem, uSubmitOrder } from '../services/api.js';
 
 // 공통 css, js
 import '../css/reset.css';
@@ -12,9 +13,12 @@ import 'swiper/css/thumbs';
 import 'swiper/css/free-mode';
 
 function Header() {
+  const userId = sessionStorage.getItem('userId');
+  const navigate = useNavigate();
   const [isLoggedIn, setIsLoggedIn] = useState(!!sessionStorage.getItem('userName'));
   const [username, setUsername] = useState(sessionStorage.getItem('userName') || '');
-  const navigate = useNavigate();
+  const [cartCount, setCartCount] = useState(0)
+  
 
   // storage 이벤트를 감지해 로그인 상태 업데이트
   useEffect(() => {
@@ -25,6 +29,20 @@ function Header() {
     };
 
     window.addEventListener('storage', handleStorageChange);
+
+    const fetchCartItems = async () =>{
+      try {
+        const response = await rFetchCartItems(userId);
+        const data = response.data;
+        const cartnum = data.cartItems.length
+        setCartCount(cartnum)
+        // console.log('response.data: ',data.cartItems.length)
+        // console.log('data: ',data)
+      } catch (error) {
+        console.error(" 장바구니 데이터를 가져오는 중 오류 발생:", error);
+      }
+    }
+    fetchCartItems();
 
     return () => {
       window.removeEventListener('storage', handleStorageChange);
@@ -162,7 +180,7 @@ function Header() {
               <li className="shop">
                 <Link to="/cart">
                   <i className="fa-solid fa-cart-shopping"></i>
-                  <span>0</span>
+                  <span>{cartCount}</span>
                 </Link>
               </li>
               <li>

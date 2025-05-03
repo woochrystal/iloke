@@ -108,6 +108,8 @@ const Cart = () => {
   
         // 클라이언트 상태 업데이트
         setCartItems((prevItems) => prevItems.filter((item) => !item.checked));
+        window.location.reload();//새로고침 추가
+
       } catch (error) {
         console.error("장바구니 항목 삭제 중 오류 발생:", error);
         alert("삭제 중 오류가 발생했습니다.");
@@ -259,9 +261,6 @@ const Cart = () => {
           id="empty_cart_message"
           style={{ textAlign: "center", fontSize: "18px" }}
         >
-          <br />
-          <br />
-          <br />
           장바구니에 담겨있는 상품이 없습니다.
         </div>
       )}

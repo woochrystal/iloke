@@ -24,14 +24,15 @@ a:visited {
 }
 
 .order_top2 {
-    float: right;
-    margin-bottom:11px;
+    /* float: right; */
+    margin-bottom:10px;
 }
 
 .order_top2 ol {
     list-style: none;
     display: flex;  
-    line-height: 49px;
+    line-height: 50px;
+    justify-content: end;
 }
 
 .order_top2 ol li {
