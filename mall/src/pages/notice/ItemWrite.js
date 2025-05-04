@@ -110,7 +110,7 @@ function ItemWrite(props) {
 
     return (
         <div className={styles.wrapper}>
-            <div className={styles.filter_header}>
+            <div className="filter_header">
                 <h2>글쓰기</h2>
                 <span>{code == "rv" ? "전체후기" : (code == "pr" ? "포토후기" : (code == "pq" ? "상품문의" : (code == "fq"? "FAQ" : (code == "nt" ? "공지사항" : "1:1문의"))))}</span>
             </div>

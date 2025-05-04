@@ -225,7 +225,7 @@ function ProductsDetailPage({ id, myData, code }) {
       <form name="proFrm" className="proFrm">
         <div className="join_base_section">
           <div className="join_base_wrap">
-            <div className="filter-header">
+            <div className="filter_header">
               <h1>{proData.name} 상세정보</h1>
             </div>
             <br />

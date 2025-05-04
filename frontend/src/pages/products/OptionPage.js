@@ -34,7 +34,7 @@ const OptionPage = () => {
 
   return (
     <div className="inquiry-section">
-      <div className="filter-header">
+      <div className="filter_header">
         <h1>옵션 관리</h1>
       </div>
       <form name="myFrm">

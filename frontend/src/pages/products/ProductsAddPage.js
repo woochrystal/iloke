@@ -303,7 +303,7 @@ function ProductsAddPage({ myData }) {
       <form name="proFrm" className="proFrm" onSubmit={proSubmit}>
         <div className="join_base_section memberList">
           <div className="join_base_wrap">
-            <div className="filter-header">
+            <div className="filter_header">
               <h1>상품등록</h1>
             </div>
             <br />

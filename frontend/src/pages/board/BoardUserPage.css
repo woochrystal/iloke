@@ -250,7 +250,7 @@
 
 /* 800px 이하일 때 */
 @media screen and (max-width: 800px) {
-  .filter-header {
+  .filter_header {
     padding-bottom: 30px;
   }
   .mypage-date-check .mypage-date-box {

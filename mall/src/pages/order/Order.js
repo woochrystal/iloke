@@ -211,7 +211,7 @@ useEffect(() => {
 
   return (
     <div className={styles.content_jh}>
-      <div className={styles.filter_header}>
+      <div className="filter_header">
         <h2>주문서작성/결제</h2>
       </div>
   

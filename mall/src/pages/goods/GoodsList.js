@@ -82,7 +82,7 @@ function GoodsList(props) {
             <div className={styles.wrap}>
                 {/* <!-- content는 고정 className --> */}
                 <section className='filter-section'>
-                    <div className='filter-header'>
+                    <div className='filter_header'>
                         <h2>내게 맞는 상품 찾기</h2>
                         <span>상품 전체보기</span>
                     </div>

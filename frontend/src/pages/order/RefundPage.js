@@ -123,7 +123,7 @@ function RefundPage() {
 
   return (
     <div className="inquiry-section">
-      <div className="filter-header">
+      <div className="filter_header">
         <h1>환불 관리 페이지</h1>
       </div>
 

@@ -148,7 +148,7 @@ function BoardPromotionPage() {
 
   return (
     <div>
-      <div className="filter-header">
+      <div className="filter_header">
         <h1>게시판 답변 관리</h1>
         <form name="myFrm">
           <div className="promotion-date-check">

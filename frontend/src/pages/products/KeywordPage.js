@@ -35,7 +35,7 @@ const KeywordPage = () => {
 
   return (
     <div className="inquiry-section">
-      <div className="filter-header">
+      <div className="filter_header">
         <h1>키워드 관리</h1>
       </div>
       <form name="myFrm">

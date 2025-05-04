@@ -44,7 +44,7 @@ const OrderEnd = ({ orderId }) => { //  orderId를 props로 받음
   return (
     <div className="content_jh">
       {/* 상단 헤더 */}
-      <div className="filter-header">
+      <div className="filter_header">
         <h2>주문완료</h2>
       </div>
 

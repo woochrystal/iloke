@@ -110,7 +110,7 @@ function CustomerReview(props) {
     
     return (
         <div className={styles.inquiry_section}>
-            <div className={styles.filter_header}>
+            <div className="filter_header">
                 <h2>고객후기</h2>
                 <span>전체후기</span>
             </div>
@@ -139,8 +139,8 @@ function CustomerReview(props) {
                 <table id="boardTable">
                     <thead>
                         <tr>                            
-                            <th style={{ width: "15%" }}>게시판번호</th>
-                            <th style={{ width: "30%" }}>제목</th>
+                            <th style={{ width: "5%" }}>No.</th>
+                            <th style={{ width: "40%" }}>제목</th>
                             <th style={{ width: "8%" }}>조회수</th>
                             <th style={{ width: "10%" }}>작성자</th>
                             <th style={{ width: "20%" }}>등록일자</th>

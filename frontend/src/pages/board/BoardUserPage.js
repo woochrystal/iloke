@@ -11,7 +11,7 @@ const BoardUserPage = () => {
 
   return (
     <div class="inquiry-section">
-        <div class="filter-header">
+        <div class="filter_header">
             <h1>유저 게시판 관리</h1>
         </div>
 

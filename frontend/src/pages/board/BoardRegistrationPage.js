@@ -99,7 +99,7 @@ const BoardRegistrationPage = () => {
 
   return (
     <div className="inquiry-section">
-      <div className="filter-header">
+      <div className="filter_header">
         <h1>게시판 등록 관리</h1>
       </div>
       <form name="myFrm">
@@ -184,8 +184,8 @@ const BoardRegistrationPage = () => {
         <table id="boardTable">
           <thead>
             <tr>
-              <th style={{ width: "10%" }}>게시판번호</th>
-              <th style={{ width: "15%" }}>제목</th>
+              <th style={{ width: "5%" }}>게시판번호</th>
+              <th style={{ width: "20%" }}>제목</th>
               <th style={{ width: "8%" }}>조회수</th>
               <th style={{ width: "10%" }}>작성자</th>
               <th style={{ width: "20%" }}>등록일자</th>

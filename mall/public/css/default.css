@@ -329,20 +329,20 @@ footer{width: 100%;background-color: #005D75; text-align: center; word-break: ke
 
 /* 이규만 스마트필터 부제목 영역 */
 
-.filter-header {
+.filter_header {
     width: 100%;
     text-align: center;
     padding-bottom: 50px;
 }
 
-.filter-header h2 {
+.filter_header h2 {
     font-size: 1.5rem;
     font-weight: 600;
     margin-bottom: 10px;
     display: block;
 }
 
-.filter-header span {
+.filter_header span {
     font-size: 2.5rem;
     font-weight: 700;
 }
@@ -415,8 +415,8 @@ footer{width: 100%;background-color: #005D75; text-align: center; word-break: ke
     .content{max-width: none; }
     .header-wrap{padding: 0 4vw 10px;}
     .content{ padding: 0 4vw 100px; padding-top: 170px;}
-    .filter-header h2 {font-size: 1.3rem;}
-    .filter-header span {font-size: 2rem;}
+    .filter_header h2 {font-size: 1.3rem;}
+    .filter_header span {font-size: 2rem;}
 
     header {height: 120px;}
     .gnb-wrap .header-logo{width: 130px;}
@@ -541,8 +541,8 @@ footer{width: 100%;background-color: #005D75; text-align: center; word-break: ke
 
     #quick .quick-wrap{bottom: 55px;}
     .main-container .main-sec01 a {font-size: 1rem;}
-    .filter-header span {font-size: 1.8rem; }
-    .filter-header h2{margin-bottom: 5px;}
+    .filter_header span {font-size: 1.8rem; }
+    .filter_header h2{margin-bottom: 5px;}
 
     .ns-rank{flex-wrap: wrap;}
     .rank-list { width: 50%;}
@@ -587,8 +587,8 @@ footer{width: 100%;background-color: #005D75; text-align: center; word-break: ke
     }
     .ft-t-right .f-num a {font-size: 1.5rem;}
     .ft-btm .ft-b-left li {width: 100%; text-align: center; padding: 0;}
-    .filter-header h2 {font-size: 1rem; }
-    .filter-header span {font-size: 1.5rem;}
+    .filter_header h2 {font-size: 1rem; }
+    .filter_header span {font-size: 1.5rem;}
     .content {padding-top: 140px; }
 
     #smart-area .smart-wrap{max-width: none; width: auto;}

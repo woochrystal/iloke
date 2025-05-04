@@ -34,7 +34,7 @@ router.get('/:userId', async (req, res) => {
   try {
     const [results] = await db.query(query, [memberId]);
 
-    console.log("cart 내역",memberId, results)
+    // console.log("cart 내역",memberId, results)
 
 
      // 클라이언트에서 계산한 final_price를 요청으로 받을 수 있는 경우

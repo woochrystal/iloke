@@ -98,7 +98,7 @@ const BoardAnswerPage = () => {
 
   return (
     <div className="inquiry-section">
-      <div className="filter-header">
+      <div className="filter_header">
         <h1>게시판 답변 관리</h1>
       </div>
       <form name='myFrm'>
@@ -154,11 +154,11 @@ const BoardAnswerPage = () => {
         <table id="boardTable">
           <thead>
             <tr>
-              <th style={{ width: "15%" }}>게시판번호</th>
+              <th style={{ width: "5%" }}>No.</th>
               {listCode === 'pq' || listCode === 'ui' ? (
-                <th style={{ width: "30%" }}>제목</th>
-              ) : (
                 <th style={{ width: "40%" }}>제목</th>
+              ) : (
+                <th style={{ width: "50%" }}>제목</th>
               )}
               
               {listCode === 'rv' || listCode === 'pr' ? (
