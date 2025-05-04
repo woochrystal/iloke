@@ -18,6 +18,7 @@ $(function () {
     if ($("#loginYn").text() == "로그아웃") {
       localStorage.removeItem("token");
       alert("로그아웃 되었습니다.");
+      window.location.reload();//새로고침 추가
       $("#loginYn").text("로그인");
       $("#join").css("display","block");
       $(".head-login").css("display","none");

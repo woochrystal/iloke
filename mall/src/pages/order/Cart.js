@@ -184,15 +184,19 @@ const Cart = () => {
       (
         <div className={styles.table_div}>
           <table>
+            <colgroup>
+              <col style={{width: '45px'}} />
+              <col style={{width: '45%'}} />
+              <col style={{width: '80px'}} />
+              <col />
+              <col  style={{width: '90px'}} />
+              <col />
+              <col  style={{width: '90px'}} />
+            </colgroup>
             <tbody>
               <tr>
                 <th>
-                  <input 
-                    type="checkbox" 
-                    id="tot_chk" 
-                    checked={isAllChecked} 
-                    onChange={handleAllCheck} 
-                  />
+                  <input  type="checkbox" id="tot_chk" checked={isAllChecked} onChange={handleAllCheck}/>
                 </th>
                 <th>상품/옵션 정보</th>
                 <th>수량</th>

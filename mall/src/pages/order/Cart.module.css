@@ -72,6 +72,7 @@ a:visited {
     border-collapse: collapse;
     width: 100%;
     text-align: center;
+    font-size: 0.8rem;
 }
 
 
@@ -79,20 +80,11 @@ a:visited {
 .table_div tr:nth-child(n+2) {
     /* 2번째 이후 요소에게 모두 적용 */
     background-color: white;
-    height: 78px;
-    border-bottom: 1px solid #cccccc;
 }
 
 .table_div th {
     background-color: #f5f5f5;
-    border-top: 1px solid #cccccc;
-    border-bottom: 1px solid #cccccc;
-    height: 40px;
-    font-size: 1rem;
-}
-
-.table_div tr th {
-    line-height: 40px;
+    font-size: 0.8rem;
 }
 
 .table_div tr td {
@@ -101,34 +93,12 @@ a:visited {
 }
 
 /* 상품금액, 합계금액, 배송비 */
-.table_div tr th:nth-child(4), 
-.table_div tr th:nth-child(6), 
-.table_div tr th:nth-child(7){
-    width: 102px;
+.table_div tr th, 
+.table_div tr td{
+    min-width: 80px;
 }
-
-/* 체크박스 */
-.table_div tr th:nth-child(1){
-    width: 45px;
-}
-
-/* 상품/옵션정보 */
-.table_div tr th:nth-child(2){
-    width: 50%;
-}
-
-
-/* 수량 */
-.table_div tr th:nth-child(3){
-    width: 120px;
-    
-}
-
-/* 할인/적립 */
-.table_div tr th:nth-child(5){
-    width: 133px;
-}   
-
+.table_div tr th:first-child, 
+.table_div tr td:first-child{min-width: auto;}
 
 /* 상품란 */
 
