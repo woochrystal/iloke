@@ -201,7 +201,7 @@ function BoardPromotionPage() {
           <div key={index} className="gallery-item">
             <div className="image-center">
               <img
-                src={`${backendBaseURL}/image/${item.image}`}
+                src={`${process.env.PUBLIC_URL}/content/img/sample/${item.image}`}
                 alt={item.title}
                 className="item-image"
               />
