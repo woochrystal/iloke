@@ -3,8 +3,6 @@ import { selectBoardAnswer } from "../../services/api"; // API 호출 함수
 import PaginationControls from "../pagination/PaginationControls";
 import BoardInsert from "./BoardInsert";
 
-import "./BoardRegistrationPage.css";
-
 const BoardRegistrationPage = () => {
   const [boards, setBoards] = useState([]); // 게시판 데이터
   const [selectedCode, setSelectedCode] = useState("nt"); // 선택된 코드
@@ -184,7 +182,7 @@ const BoardRegistrationPage = () => {
         <table id="boardTable">
           <thead>
             <tr>
-              <th style={{ width: "5%" }}>게시판번호</th>
+              <th style={{ width: "5%" }}>No.</th>
               <th style={{ width: "20%" }}>제목</th>
               <th style={{ width: "8%" }}>조회수</th>
               <th style={{ width: "10%" }}>작성자</th>

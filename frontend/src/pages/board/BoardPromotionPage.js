@@ -195,7 +195,6 @@ function BoardPromotionPage() {
           </div>
         </form>
       </div>
-
       <div className="gallery">
         {currentItems.map((item, index) => (
           <div key={index} className="gallery-item">

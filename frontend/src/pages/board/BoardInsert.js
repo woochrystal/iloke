@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import { deleteBoardAnswer, insertBoardRegistration } from "../../services/api";
 
-import "./BoardInsert.css";
 
 const backendBaseURL = process.env.REACT_APP_BACK_URL;
 
