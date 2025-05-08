@@ -189,7 +189,7 @@ const BoardRegistrationPage = () => {
               <th style={{ width: "20%" }}>등록일자</th>
               <th style={{ width: "10%" }}>수정자</th>
               <th style={{ width: "20%" }}>수정일자</th>
-              <th style={{ width: "7%" }}>삭제</th>
+              <th style={{ width: "7%" }}>상태</th>
             </tr>
           </thead>
           <tbody id="boardBody">

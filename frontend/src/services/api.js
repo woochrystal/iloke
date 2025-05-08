@@ -28,16 +28,13 @@ export const updateBoards = () => API.put("/boards/admin");
 export const selectImageLoad = (id) => API.get(`/img`, { params: { id } });
 
 // 답변 게시판
-export const selectBoardAnswer = (myData) =>
-  API.get(`/boards/answer`, { params: myData });
+export const selectBoardAnswer = (myData) => API.get(`/boards/answer`, { params: myData });
 export const updateBoardAnswer = () => API.put("/boards/answer");
 export const insertBoardAnswer = (myData) => API.post("/boards/answer", myData);
-export const deleteBoardAnswer = (id) =>
-  API.delete(`/boards/answer`, { params: { id } }); // 실제론 update
+export const deleteBoardAnswer = (id) => API.delete(`/boards/answer`, { params: { id } }); // 실제론 update
 
 // 등록게시판
-export const insertBoardRegistration = (myData) =>
-  API.post("/boards/registration", myData);
+export const insertBoardRegistration = (myData) => API.post("/boards/registration", myData);
 
 // 상품 관리
 export const selectProduct = () => API.get("/products");
