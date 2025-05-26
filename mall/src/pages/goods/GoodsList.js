@@ -234,7 +234,8 @@ function GoodsList(props) {
                                     return(
                                         <Link to={`/goodsDetail/${item.id}`} className={styles.product_item} key={idx}>
                                             <div className={styles.product_image_link}>
-                                                    <img src="https://picsum.photos/300/240" alt="protoImage"/>
+                                                    {/* <img src="https://picsum.photos/300/240" alt="protoImage"/> */}
+                                                    <img src="/iloke/mall/content/img/sample/detail_01.jpg" alt="protoImage"/>
                                                     <p>{item.name}</p>
                                                 <span className={styles.original_price}>{slash}</span>
                                                 <div className={styles.price_container}>
