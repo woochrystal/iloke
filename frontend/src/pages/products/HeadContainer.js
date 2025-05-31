@@ -139,7 +139,6 @@ const HeadContainer = ({
   const indexOfLastItem = currentPage * itemsPerPage;
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
   const currentItems = options.slice(indexOfFirstItem, indexOfLastItem);
-  console.log(currentItems[0].type)//개수로 올리기
 
   return (
     <div>
@@ -165,8 +164,8 @@ const HeadContainer = ({
                   onClick={() => handleRowClick(item.code, index)}
                   className={getRowClassName(index)}
                 >
+                  <td>{index + 1}</td>
                   {/* <td>{item.code}</td> */}
-                  <td>{item.type}</td>
                   <td>
                     <input
                       type="text"

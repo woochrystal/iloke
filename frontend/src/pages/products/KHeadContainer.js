@@ -164,7 +164,8 @@ const KHeadContainer = ({
                   onClick={() => handleRowClick(item.code, index)}
                   className={getRowClassName(index)}
                 >
-                  <td>{item.code}</td>
+                  <td>{index + 1}</td>
+                  {/* <td>{item.code}</td> */}
                   <td>
                     <input
                       type="text"
