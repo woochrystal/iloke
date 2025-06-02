@@ -58,6 +58,12 @@ function Home(props) {
 
     return (
         <div>
+          
+          <div className="notice_banner" id="notice_banner">
+            <h2>[공지사항]</h2>
+            <p> 데이터베이스 이전 중입니다.</p>
+            <span>25.06.01</span>
+          </div>
         <div className="main-container" id="main">
           <Swiper
             tag='section'

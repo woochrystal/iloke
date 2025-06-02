@@ -4,8 +4,15 @@
 /* .wrap{background-color: #ccc;} */
 
 /* wsj - 네비 + 푸터 + 퀵메뉴 + 스마트검색 */
-/* header */
+/* 250602 디비공지 */
+.notice_banner{
+    position: fixed; z-index: 100000; left: 50%; top: 50%; transform: translate(-50%, -50%);
+    background-color: #fff; padding: 30px 50px;box-shadow: 0 0 10px #00000055;
+}
+.notice_banner p{font-size: 20px;text-align: center;}
+.notice_banner span{display: inline-block; width: 100%; text-align: center; padding-top: 20px;}
 
+/* header */
 header{
     height: 150px; background: #fff; position: fixed; width: 100%;border-bottom: 1px solid #F5F5F5; top: 0;
     align-items: flex-end; display: flex; justify-content: center;z-index: 1000; transition: 0.3s, border-color 0.1s; 
@@ -564,6 +571,11 @@ footer{width: 100%;background-color: #005D75; text-align: center; word-break: ke
 
 }
 @media screen and (max-width:480px){
+    .notice_banner  {padding: 15px 10px;}
+    .notice_banner h2{font-size: 16px; margin-bottom: 5px;}
+    .notice_banner p {font-size: 15px;}
+    .notice_banner span{padding-top: 10px; font-size: 13px;}
+
     .gnb-wrap .header-logo { width: 100px; }
     .ft-btm .ft-b-left li{width: calc(50% - 10px); text-align: left; padding-bottom: 5px; line-height: 1.5;}
     .main-container .wrap, footer .f-wrap {padding: 40px 5vw;}
