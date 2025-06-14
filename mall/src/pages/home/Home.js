@@ -61,8 +61,17 @@ function Home(props) {
           
           <div className="notice_banner" id="notice_banner">
             <h2>[공지사항]</h2>
-            <p> 데이터베이스 이전 중입니다.</p>
-            <span>25.06.01</span>
+            <p>
+              현재 백엔드 시스템(Node.js, MariaDB) 이전 작업으로 인해
+              일부 기능이 일시적으로 정상 작동하지 않을 수 있습니다.<br/>
+              <br/>
+              서비스 안정화를 위해 빠르게 조치 중이며,<br/>
+              최대한 빠른 시간 내에 정상화될 수 있도록 하겠습니다.<br/>
+              <br/>
+              이용에 불편을 드려 죄송합니다.<br/>
+              감사합니다.<br/>
+            </p>
+            <span>25.06.14</span>
           </div>
         <div className="main-container" id="main">
           <Swiper
