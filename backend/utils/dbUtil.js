@@ -6,13 +6,14 @@ const parsedUrl = new URL(dbUrl);
 
 // 데이터베이스 연결 객체 생성
 const conn = db.createPool({
-    host: parsedUrl.hostname,
-    user: parsedUrl.username,
-    password: parsedUrl.password,
-    database: parsedUrl.pathname.replace('/', ''),
-    ssl: {
-        rejectUnauthorized: true
-    }
+    host: process.env.DATABASE_HOST,
+    port: process.env.DATABASE_PORT,
+    user: process.env.DATABASE_USER,
+    password: process.env.DATABASE_PASSWORD,
+    database: process.env.DATABASE_NAME,
+    waitForConnections: true,
+    connectionLimit: 10,
+    queueLimit: 0
 });
 
 // 서버 종료 시 DB 연결 종료
