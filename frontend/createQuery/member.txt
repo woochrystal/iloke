@@ -33,3 +33,4 @@ CREATE TABLE mileage(
     upt_id VARCHAR(60) COMMENT '수정자', 
     upt_date DATETIME DEFAULT NULL COMMENT '수정 일시'
 )   COMMENT = '마일리지 관리 테이블';
+

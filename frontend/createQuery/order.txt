@@ -67,5 +67,5 @@ CREATE TABLE deliveries (
     reg_date DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '작성일시',
     upt_id VARCHAR(50) DEFAULT NULL COMMENT '수정자',
     upt_date DATETIME DEFAULT NULL COMMENT '수정일시'
-) COMMENT='배송 정보 테이블'
+) COMMENT='배송 정보 테이블';
 
