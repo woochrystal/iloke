@@ -7,9 +7,9 @@ CREATE TABLE mem_info (
     phone_num VARCHAR(20) COMMENT '휴대전화', 
     email VARCHAR(100) COMMENT '이메일', 
     addr VARCHAR(255) COMMENT '주소', 
-    role ENUM('관리자', '회원', '비회원', '탈퇴회원') DEFAULT '회원' COMMENT '접근 권한',  -- DEFAULT 값 수정
-    type ENUM('일반', '블랙리스트', '휴면계정') DEFAULT '일반'  COMMENT '회원 구분',-- DEFAULT 값 수정
-    level ENUM('브론즈', '실버', '골드', 'VIP') DEFAULT '브론즈' COMMENT '회원 등급', -- DEFAULT 값 수정
+    role ENUM('관리자', '회원', '비회원', '탈퇴회원') DEFAULT '회원' COMMENT '접근 권한',
+    type ENUM('일반', '블랙리스트', '휴면계정') DEFAULT '일반'  COMMENT '회원 구분',
+    level ENUM('브론즈', '실버', '골드', 'VIP') DEFAULT '브론즈' COMMENT '회원 등급',
     join_date DATETIME DEFAULT CURRENT_TIMESTAMP COMMENT '가입일시', 
     last_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '최근접속일', 
     m_remain INT DEFAULT 0 COMMENT '잔여 마일리지',
