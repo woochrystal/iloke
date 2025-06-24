@@ -2,6 +2,7 @@ require('dotenv').config();
 const db = require('mysql2/promise');
 const { parse } = require('url');
 const dbUrl = process.env.DATABASE_URL;
+console.log(dbUrl)
 const parsedUrl = new URL(dbUrl);
 
 // 데이터베이스 연결 객체 생성
