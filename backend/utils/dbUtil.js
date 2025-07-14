@@ -2,19 +2,30 @@ require('dotenv').config();
 const db = require('mysql2/promise');
 const { parse } = require('url');
 const dbUrl = process.env.DATABASE_URL;
-console.log(dbUrl)
 const parsedUrl = new URL(dbUrl);
+// console.log(parsedUrl.hostname,'::')
+// console.log(parsedUrl.username,'::')
+// console.log(parsedUrl.password,'::')
+// console.log(parsedUrl.pathname.replace('/', ''),'::')
 
 // 데이터베이스 연결 객체 생성
 const conn = db.createPool({
-    host: process.env.DATABASE_HOST,
-    port: process.env.DATABASE_PORT,
-    user: process.env.DATABASE_USER,
-    password: process.env.DATABASE_PASSWORD,
-    database: process.env.DATABASE_NAME,
-    waitForConnections: true,
-    connectionLimit: 10,
-    queueLimit: 0
+        host: parsedUrl.hostname,
+        user: parsedUrl.username,
+        password: parsedUrl.password,
+        database: parsedUrl.pathname.replace('/', ''),
+        ssl: {
+            rejectUnauthorized: true
+    }
+
+    // host: process.env.DATABASE_HOST,
+    // port: process.env.DATABASE_PORT,
+    // user: process.env.DATABASE_USER,
+    // password: process.env.DATABASE_PASSWORD,
+    // database: process.env.DATABASE_NAME,
+    // waitForConnections: true,
+    // connectionLimit: 10,
+    // queueLimit: 0
 });
 
 // 서버 종료 시 DB 연결 종료
